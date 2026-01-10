@@ -51,7 +51,7 @@ p {
 }
 
 .card:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 10px rgb(52, 93, 47);
 }
 
 /* Centered card variation */
@@ -59,16 +59,70 @@ p {
   text-align: center;
 }
 
+.resource-item {
+  border: 2px solid rgba(52, 93, 47, 0.6); /* matching your green accent */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.resource-item p {
+  margin: 0 0 0.5rem 0;
+}
+
+.resource-item a {
+  display: inline-block;
+  margin-top: 0.25rem;
+  text-decoration: underline;
+  color: rgb(44, 62, 80);
+}
+
+.resource-item a:hover {
+  text-decoration: none;
+}
+
+.r-item {
+    background-color: rgba(52, 93, 47, 0.6);
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.r-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(52, 93, 47);
+}
+
 /* ------------------------------
    Circle Element
 ------------------------------ */
 .circle {
   background-color: rgb(255, 255, 255);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 4px rgb(52, 93, 47);
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  margin: 0 auto 1rem auto;
+  object-fit: cover;
+}
+
+.circle:hover {
+  box-shadow: 4px 4px 10px rgb(52, 93, 47);
 }
 
 /* ------------------------------
