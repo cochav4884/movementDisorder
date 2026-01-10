@@ -7,7 +7,10 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: rgb(44, 62, 80);
 }
 
@@ -22,6 +25,7 @@ p {
 .jumbotron {
   background-color: rgba(52, 93, 47, 0.6);
   padding: 3rem 2rem;
+  border-radius: 5px;
 }
 
 /* Hero layout */
@@ -36,8 +40,22 @@ p {
   flex: 1 1 300px;
 }
 
-.hero-image {
-  flex: 1 1 300px;
+.support-image {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-image:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgb(246, 243, 235);
 }
 
 /* ------------------------------
@@ -64,7 +82,7 @@ p {
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -88,14 +106,14 @@ p {
 }
 
 .r-item {
-    background-color: rgba(52, 93, 47, 0.6);
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  background-color: rgba(52, 93, 47, 0.6);
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 .r-item:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px rgb(52, 93, 47);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgb(52, 93, 47);
 }
 
 /* ------------------------------
@@ -103,7 +121,7 @@ p {
 ------------------------------ */
 .circle {
   background-color: rgb(255, 255, 255);
-  box-shadow: 2px 2px 4px rgb(52, 93, 47);
+  box-shadow: 4px 4px 10px rgb(0, 0, 0);
   width: 90px;
   height: 90px;
   margin: 0 auto 1rem auto;
@@ -147,12 +165,29 @@ p {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.nav-link-item {
+  background-color: rgba(52, 93, 47, 0.6);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-link-item:hover {
+  background-color: rgb(52, 93, 47);
+  color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 10px rgb(52, 93, 47);
 }
 
 /* ------------------------------
    Main Content Layout
 ------------------------------ */
 .main-content {
+  background-color: rgb(246, 243, 235);
   padding: 3rem 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -182,9 +217,11 @@ button:focus {
    Footer
 ------------------------------ */
 .footer {
+  background-color: rgba(52, 93, 47, 0.6);
   text-align: center;
   padding: 2rem;
   color: rgb(44, 62, 80);
+  border-radius: 5px;
 }
 
 /* ------------------------------
