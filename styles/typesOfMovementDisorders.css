@@ -1,0 +1,88 @@
+/* Section Titles */
+.section-title {
+  font-weight: 700;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Expandable cards */
+.expand-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border-left: 8px solid transparent;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.expand-card summary {
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expand-card summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Arrow icon rotation */
+.expand-card[open] .icon {
+  transform: rotate(90deg);
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Subtypes indentation */
+.subtype {
+  margin-left: 1.5rem;
+  opacity: 0.95;
+}
+
+/* Paragraph styling */
+.expand-card p {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Ribbon Colors */
+.ribbon-gray { border-left-color: #808080; }
+.ribbon-purple { border-left-color: #800080; }
+.ribbon-green { border-left-color: #008000; }
+.ribbon-orange { border-left-color: #FFA500; }
+.ribbon-gold { border-left-color: #FFD700; }
+.ribbon-blue { border-left-color: #0000FF; }
+.ribbon-teal { border-left-color: #008080; }
+.ribbon-maroon { border-left-color: #800000; }
+.ribbon-lightblue { border-left-color: #ADD8E6; }
+
+/* Legend styling */
+.legend {
+  font-size: 0.95rem;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.legend-color {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.ribbon-primary { background-color: #000; } /* Black = Primary disorder */
+.ribbon-subtype { background-color: #555; } /* Dark gray = Subtype */
+
+/* Mobile-friendly spacing (Bootstrap handles grid) */
+@media (max-width: 576px) {
+  .subtype {
+    margin-left: 1rem;
+  }
+}
