@@ -38,6 +38,26 @@
   font-size: 1.2rem;
 }
 
+.infinity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Icon size */
+.infinity i {
+  font-size: 3rem;
+}
+
+/* Optional: clickable area */
+.infinity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Subtypes indentation */
 .subtype {
   margin-left: 1.5rem;
