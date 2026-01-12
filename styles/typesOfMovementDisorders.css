@@ -10,7 +10,7 @@
   background: #fff;
   border-radius: 14px;
   padding: 1rem 1.25rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   border-left: 8px solid transparent;
   cursor: pointer;
   transition: background 0.3s;
@@ -72,15 +72,33 @@
 }
 
 /* Ribbon Colors */
-.ribbon-gray { border-left-color: #808080; }
-.ribbon-purple { border-left-color: #800080; }
-.ribbon-green { border-left-color: #008000; }
-.ribbon-orange { border-left-color: #FFA500; }
-.ribbon-gold { border-left-color: #FFD700; }
-.ribbon-blue { border-left-color: #0000FF; }
-.ribbon-teal { border-left-color: #008080; }
-.ribbon-maroon { border-left-color: #800000; }
-.ribbon-lightblue { border-left-color: #ADD8E6; }
+.ribbon-gray {
+  border-left-color: #808080;
+}
+.ribbon-purple {
+  border-left-color: #800080;
+}
+.ribbon-green {
+  border-left-color: #008000;
+}
+.ribbon-orange {
+  border-left-color: #ffa500;
+}
+.ribbon-gold {
+  border-left-color: #ffd700;
+}
+.ribbon-blue {
+  border-left-color: #0000ff;
+}
+.ribbon-teal {
+  border-left-color: #008080;
+}
+.ribbon-maroon {
+  border-left-color: #800000;
+}
+.ribbon-lightblue {
+  border-left-color: #add8e6;
+}
 
 /* Legend styling */
 .legend {
@@ -97,18 +115,21 @@
   display: inline-block;
   border-radius: 4px;
 }
-.ribbon-primary { background-color: #000; } /* Black = Primary disorder */
+.ribbon-primary {
+  background-color: #000;
+} /* Black = Primary disorder */
 .ribbon-subtype {
-  background: linear-gradient(90deg,
-    #FFA500 0%,  /* Orange */
-    #FFD700 11%, /* Gold */
-    #1E90FF 22%, /* Blue */
-    #32CD32 33%, /* Green */
-    #008080 44%, /* Teal */
-    #87CEFA 55%, /* Light Blue */
-    #808080 66%, /* Gray */
-    #800000 77%, /* Maroon */
-    #800080 88%  /* Purple */
+  background: linear-gradient(
+    90deg,
+    #ffa500 0%,
+    /* Orange */ #ffd700 11%,
+    /* Gold */ #1e90ff 22%,
+    /* Blue */ #32cd32 33%,
+    /* Green */ #008080 44%,
+    /* Teal */ #87cefa 55%,
+    /* Light Blue */ #808080 66%,
+    /* Gray */ #800000 77%,
+    /* Maroon */ #800080 88% /* Purple */
   );
   color: transparent;
 }
@@ -128,14 +149,14 @@
 /* ------------------------------
    Circle Element
 ------------------------------ */
-.circle1, 
-.circle2, 
-.circle3, 
-.circle4, 
-.circle5, 
-.circle6, 
-.circle7, 
-.circle8, 
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5,
+.circle6,
+.circle7,
+.circle8,
 .circle9 {
   background-color: rgb(255, 255, 255);
   box-shadow: 4px 4px 10px rgb(0, 0, 0);
@@ -149,32 +170,32 @@
   justify-content: center;
 }
 
-.circle1:hover, 
-.circle2:hover, 
-.circle3:hover, 
-.circle4:hover, 
-.circle5:hover, 
-.circle6:hover, 
-.circle7:hover, 
-.circle8:hover, 
+.circle1:hover,
+.circle2:hover,
+.circle3:hover,
+.circle4:hover,
+.circle5:hover,
+.circle6:hover,
+.circle7:hover,
+.circle8:hover,
 .circle9:hover {
   box-shadow: 4px 4px 10px rgb(52, 93, 47);
 }
 
 .circle1 {
-  border: 10px solid #FFA500; /* Orange */
+  border: 10px solid #ffa500; /* Orange */
 }
 
 .circle2 {
-  border: 10px solid #FFD700; /* Gold */
+  border: 10px solid #ffd700; /* Gold */
 }
 
 .circle3 {
-  border: 10px solid #1E90FF; /* Blue */
+  border: 10px solid #1e90ff; /* Blue */
 }
 
 .circle4 {
-  border: 10px solid #32CD32; /* Green */
+  border: 10px solid #32cd32; /* Green */
 }
 
 .circle5 {
@@ -182,7 +203,7 @@
 }
 
 .circle6 {
-  border: 10px solid #87CEFA; /* Light Blue */
+  border: 10px solid #87cefa; /* Light Blue */
 }
 
 .circle7 {
@@ -200,53 +221,101 @@
 /*----------------------------
 Font Awesome Integration
 ----------------------------*/
-.fa-solid.fa-infinity{
+.fa-solid.fa-infinity {
   font-size: 2.5rem;
 }
 
-.infinity.tremors-general i{
-   color: #FFA500;  /* Orange */
+.infinity.tremors-general i {
+  color: #ffa500; /* Orange */
 }
 
-.infinity.essential-tremor i{
-   color: #FFD700;  /* Gold */
+.infinity.essential-tremor i {
+  color: #ffd700; /* Gold */
 }
 
-.infinity.resting-tremor i, 
-.infinity.myoclonus i{
-   color: #1E90FF;  /* Blue */
+.infinity.resting-tremor i,
+.infinity.myoclonus i {
+  color: #1e90ff; /* Blue */
 }
 
-.infinity.action-tremor i, 
-.infinity.dystonia i, 
-.infinity.focal-dystonia i, 
+.infinity.action-tremor i,
+.infinity.dystonia i,
+.infinity.focal-dystonia i,
 .infinity.generalized-dystonia i,
 .infinity.restless-legs-syndrome i,
 .infinity.wilsons-disease i {
-   color: #32CD32;  /* Green */
+  color: #32cd32; /* Green */
 }
 
 .infinity.intention-tremor i,
-.infinity.progressive-supranuclear-palsy i, 
-.infinity.tourette-syndrome i{
-   color: #008080;  /* Teal */
+.infinity.progressive-supranuclear-palsy i,
+.infinity.tourette-syndrome i {
+  color: #008080; /* Teal */
 }
 
-.infinity.postural-tremor i, 
-.infinity.multiple-system-atrophy i{
-   color: #87CEFA;  /* Light Blue */
+.infinity.postural-tremor i,
+.infinity.multiple-system-atrophy i {
+  color: #87cefa; /* Light Blue */
 }
 
-.infinity.parkinsons-disease i{
-   color: #808080;  /* Gray */
+.infinity.parkinsons-disease i {
+  color: #808080; /* Gray */
 }
 
-.infinity.ataxia i, 
-.infinity.spinocerebellar-ataxia i, 
-.infinity.friedreichs-ataxia i{
-   color: #800000;  /* Maroon */
+.infinity.ataxia i,
+.infinity.spinocerebellar-ataxia i,
+.infinity.friedreichs-ataxia i {
+  color: #800000; /* Maroon */
 }
 
-.infinity.tardive-dyskinesia i{
-   color: #800080;  /* Purple */
+.infinity.tardive-dyskinesia i {
+  color: #800080; /* Purple */
+}
+
+/*------------------------------ 
+Back to Top Button 
+------------------------------*/
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background: linear-gradient(
+    90deg,
+    #ffa500 0%,
+    /* Orange */ #ffd700 11%,
+    /* Gold */ #1e90ff 22%,
+    /* Blue */ #32cd32 33%,
+    /* Green */ #008080 44%,
+    /* Teal */ #87cefa 55%,
+    /* Light Blue */ #808080 66%,
+    /* Gray */ #800000 77%,
+    /* Maroon */ #800080 88% /* Purple */
+  );
+}
+.ribbon-multicolor::before,
+.ribbon-multicolor::after,
+.ribbon-multicolor span {
+  background: inherit;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  font-weight:bolder;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+#backToTop:hover {
+  transform: scale(1.1);
+}
+
+/* Keyboard focus (ADA) */
+#backToTop:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
