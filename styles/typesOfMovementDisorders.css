@@ -86,3 +86,82 @@
     margin-left: 1rem;
   }
 }
+
+/* ================= Infinity Ribbon CSS ================= */
+.ribbon-grid {
+  justify-content: center;
+}
+
+.infinity-ribbon {
+  width: 120px;
+  height: 60px;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Shape */
+.infinity-ribbon::before,
+.infinity-ribbon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 0;
+  background: currentColor;
+}
+
+/* Left circle */
+.infinity-ribbon::before {
+  left: 0;
+}
+
+/* Right circle */
+.infinity-ribbon::after {
+  right: 0;
+}
+
+/* Cross in the middle to form infinity */
+.infinity-ribbon span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 90px;
+  height: 30px;
+  background: currentColor;
+  border-radius: 15px;
+  transform: rotate(45deg);
+}
+
+/* Ribbon colors */
+.ribbon-orange { color: #FFA500; }
+.ribbon-gold { color: #FFD700; }
+.ribbon-blue { color: #1E90FF; }
+.ribbon-green { color: #32CD32; }
+.ribbon-teal { color: #008080; }
+.ribbon-lightblue { color: #87CEFA; }
+.ribbon-gray { color: #808080; }
+.ribbon-maroon { color: #800000; }
+.ribbon-purple { color: #800080; }
+
+/* Multi-color infinity ribbon */
+.ribbon-multicolor {
+  background: linear-gradient(90deg,
+    #FFA500 0%,  /* Orange */
+    #FFD700 11%, /* Gold */
+    #1E90FF 22%, /* Blue */
+    #32CD32 33%, /* Green */
+    #008080 44%, /* Teal */
+    #87CEFA 55%, /* Light Blue */
+    #808080 66%, /* Gray */
+    #800000 77%, /* Maroon */
+    #800080 88%  /* Purple */
+  );
+  color: transparent;
+}
+.ribbon-multicolor::before,
+.ribbon-multicolor::after,
+.ribbon-multicolor span {
+  background: inherit;
+}
