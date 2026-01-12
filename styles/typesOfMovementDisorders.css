@@ -222,11 +222,11 @@ Font Awesome Integration
 }
 
 .infinity.ataxia i, 
-.infinity.Spinocerebellar-ataxia i, 
-.infinity.Friedreichs-ataxia i{
+.infinity.spinocerebellar-ataxia i, 
+.infinity.friedreichs-ataxia i{
    color: #800000;  /* Maroon */
 }
 
-.infinity.infinity.tardive-dyskinesia i{
+.infinity.tardive-dyskinesia i{
    color: #800080;  /* Purple */
 }
