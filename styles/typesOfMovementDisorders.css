@@ -78,75 +78,7 @@
   border-radius: 4px;
 }
 .ribbon-primary { background-color: #000; } /* Black = Primary disorder */
-.ribbon-subtype { background-color: #555; } /* Dark gray = Subtype */
-
-/* Mobile-friendly spacing (Bootstrap handles grid) */
-@media (max-width: 576px) {
-  .subtype {
-    margin-left: 1rem;
-  }
-}
-
-/* ================= Infinity Ribbon CSS ================= */
-.ribbon-grid {
-  justify-content: center;
-}
-
-.infinity-ribbon {
-  width: 120px;
-  height: 60px;
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-}
-
-/* Shape */
-.infinity-ribbon::before,
-.infinity-ribbon::after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  top: 0;
-  background: currentColor;
-}
-
-/* Left circle */
-.infinity-ribbon::before {
-  left: 0;
-}
-
-/* Right circle */
-.infinity-ribbon::after {
-  right: 0;
-}
-
-/* Cross in the middle to form infinity */
-.infinity-ribbon span {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 90px;
-  height: 30px;
-  background: currentColor;
-  border-radius: 15px;
-  transform: rotate(45deg);
-}
-
-/* Ribbon colors */
-.ribbon-orange { color: #FFA500; }
-.ribbon-gold { color: #FFD700; }
-.ribbon-blue { color: #1E90FF; }
-.ribbon-green { color: #32CD32; }
-.ribbon-teal { color: #008080; }
-.ribbon-lightblue { color: #87CEFA; }
-.ribbon-gray { color: #808080; }
-.ribbon-maroon { color: #800000; }
-.ribbon-purple { color: #800080; }
-
-/* Multi-color infinity ribbon */
-.ribbon-multicolor {
+.ribbon-subtype {
   background: linear-gradient(90deg,
     #FFA500 0%,  /* Orange */
     #FFD700 11%, /* Gold */
@@ -164,4 +96,137 @@
 .ribbon-multicolor::after,
 .ribbon-multicolor span {
   background: inherit;
+}
+
+/* Mobile-friendly spacing (Bootstrap handles grid) */
+@media (max-width: 576px) {
+  .subtype {
+    margin-left: 1rem;
+  }
+}
+
+/* ------------------------------
+   Circle Element
+------------------------------ */
+.circle1, 
+.circle2, 
+.circle3, 
+.circle4, 
+.circle5, 
+.circle6, 
+.circle7, 
+.circle8, 
+.circle9 {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 10px rgb(0, 0, 0);
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle1:hover, 
+.circle2:hover, 
+.circle3:hover, 
+.circle4:hover, 
+.circle5:hover, 
+.circle6:hover, 
+.circle7:hover, 
+.circle8:hover, 
+.circle9:hover {
+  box-shadow: 4px 4px 10px rgb(52, 93, 47);
+}
+
+.circle1 {
+  border: 10px solid #FFA500; /* Orange */
+}
+
+.circle2 {
+  border: 10px solid #FFD700; /* Gold */
+}
+
+.circle3 {
+  border: 10px solid #1E90FF; /* Blue */
+}
+
+.circle4 {
+  border: 10px solid #32CD32; /* Green */
+}
+
+.circle5 {
+  border: 10px solid #008080; /* Teal */
+}
+
+.circle6 {
+  border: 10px solid #87CEFA; /* Light Blue */
+}
+
+.circle7 {
+  border: 10px solid #808080; /* Gray */
+}
+
+.circle8 {
+  border: 10px solid #800000; /* Maroon */
+}
+
+.circle9 {
+  border: 10px solid #800080; /* Purple */
+}
+
+/*----------------------------
+Font Awesome Integration
+----------------------------*/
+.fa-solid.fa-infinity{
+  font-size: 2.5rem;
+}
+
+.infinity.tremors-general i{
+   color: #FFA500;  /* Orange */
+}
+
+.infinity.essential-tremor i{
+   color: #FFD700;  /* Gold */
+}
+
+.infinity.resting-tremor i, 
+.infinity.myoclonus i{
+   color: #1E90FF;  /* Blue */
+}
+
+.infinity.action-tremor i, 
+.infinity.dystonia i, 
+.infinity.focal-dystonia i, 
+.infinity.generalized-dystonia i,
+.infinity.restless-legs-syndrome i,
+.infinity.wilsons-disease i {
+   color: #32CD32;  /* Green */
+}
+
+.infinity.intention-tremor i,
+.infinity.progressive-supranuclear-palsy i, 
+.infinity.tourette-syndrome i{
+   color: #008080;  /* Teal */
+}
+
+.infinity.postural-tremor i, 
+.infinity.multiple-system-atrophy i{
+   color: #87CEFA;  /* Light Blue */
+}
+
+.infinity.parkinsons-disease i{
+   color: #808080;  /* Gray */
+}
+
+.infinity.ataxia i, 
+.infinity.Spinocerebellar-ataxia i, 
+.infinity.Friedreichs-ataxia i{
+   color: #800000;  /* Maroon */
+}
+
+.infinity.infinity.tardive-dyskinesia i{
+   color: #800080;  /* Purple */
 }
