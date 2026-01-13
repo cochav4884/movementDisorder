@@ -249,7 +249,7 @@
 }
 
 .circle9 {
-  border: 10px solid #800080; /* Purple */
+  border: 10px solid #800080 !important; /* Purple */
 }
 
 /*----------------------------
