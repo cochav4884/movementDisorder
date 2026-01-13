@@ -40,10 +40,11 @@
 
 .infinity-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 1fr; /* this forces all rows to have equal height */
+  gap: 32px;           /* equal spacing horizontally & vertically */
   justify-items: center;
-  align-items: center;
+  align-items: start;
 }
 
 /* Icon size */
@@ -170,6 +171,38 @@
   justify-content: center;
 }
 
+.circle10 { 
+  box-shadow: 4px 4px 10px rgb(0, 0, 0);
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #000000 solid 10px; /* Black */
+  background: linear-gradient(
+    90deg,
+    #ffa500 0%,
+    /* Orange */ #ffd700 11%,
+    /* Gold */ #1e90ff 22%,
+    /* Blue */ #32cd32 33%,
+    /* Green */ #008080 44%,
+    /* Teal */ #87cefa 55%,
+    /* Light Blue */ #808080 66%,
+    /* Gray */ #800000 77%,
+    /* Maroon */ #800080 88% /* Purple */
+  );
+}
+.ribbon-multicolor::before,
+.ribbon-multicolor::after,
+.ribbon-multicolor span {
+  background: inherit;
+ /* Multi-colored */
+}
+
+
 .circle1:hover,
 .circle2:hover,
 .circle3:hover,
@@ -178,7 +211,8 @@
 .circle6:hover,
 .circle7:hover,
 .circle8:hover,
-.circle9:hover {
+.circle9:hover,
+.circle10:hover {
   box-shadow: 4px 4px 10px rgb(52, 93, 47);
 }
 
@@ -271,6 +305,11 @@ Font Awesome Integration
 .infinity.tardive-dyskinesia i {
   color: #800080; /* Purple */
 }
+
+.infinity.awareness i {
+  color: #000000; /* Black */
+}
+
 
 /*------------------------------ 
 Back to Top Button 
