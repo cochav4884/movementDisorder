@@ -302,3 +302,23 @@ button.primary:disabled {
   line-height: 1.4;
   flex: 1; /* take remaining horizontal space */
 }
+
+/*------------------------------
+Logo Ideas
+------------------------------*/
+.logoIdeas img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 10px rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  border: 10px solid black;
+}
+
+.logoIdeas img:hover {
+  box-shadow: 0 4px 12px rgb(52, 93, 47);
+}
