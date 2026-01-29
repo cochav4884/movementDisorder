@@ -159,7 +159,7 @@
 .circle7,
 .circle8,
 .circle9 {
-  background-color: rgb(255, 255, 255);
+  background-color: #c0c0c0;
   box-shadow: 4px 4px 10px rgb(0, 0, 0);
   width: 90px;
   height: 90px;
@@ -181,7 +181,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: #000000 solid 10px; /* Black */
   background: linear-gradient(
     90deg,
     #ffa500 0%,
@@ -215,43 +214,43 @@
 .circle10:hover {
   box-shadow: 4px 4px 10px rgb(52, 93, 47);
 }
-
+/*
 .circle1 {
-  border: 10px solid #ffa500; /* Orange */
+  border: 10px solid #ffa500; /* Orange
 }
 
 .circle2 {
-  border: 10px solid #ffd700; /* Gold */
+  border: 10px solid #ffd700; /* Gold
 }
 
 .circle3 {
-  border: 10px solid #1e90ff; /* Blue */
+  border: 10px solid #1e90ff; /* Blue
 }
 
 .circle4 {
-  border: 10px solid #32cd32; /* Green */
+  border: 10px solid #32cd32; /* Green
 }
 
 .circle5 {
-  border: 10px solid #008080; /* Teal */
+  border: 10px solid #008080; /* Teal
 }
 
 .circle6 {
-  border: 10px solid #87cefa; /* Light Blue */
+  border: 10px solid #87cefa; /* Light Blue
 }
 
 .circle7 {
-  border: 10px solid #808080; /* Gray */
+  border: 10px solid #808080; /* Gray
 }
 
 .circle8 {
-  border: 10px solid #800000; /* Maroon */
+  border: 10px solid #800000; /* Maroon
 }
 
 .circle9 {
-  border: 10px solid #800080 !important; /* Purple */
+  border: 10px solid #800080 !important; /* Purple
 }
-
+*/
 /*----------------------------
 Font Awesome Integration
 ----------------------------*/
@@ -307,7 +306,7 @@ Font Awesome Integration
 }
 
 .infinity.awareness i {
-  color: #000000; /* Black */
+  color: #c0c0c0; /* silver */
 }
 
 

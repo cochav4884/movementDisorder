@@ -47,10 +47,20 @@ p {
    ====================================================== */
 .navbar {
   padding: 1.5rem 2rem;
-  background: #833AB4;
-background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 231, 69, 1) 100%);
-  border-radius: 6px;
+   background: linear-gradient(
+    90deg,
+    #ffa500 0%,
+    /* Orange */ #ffd700 11%,
+    /* Gold */ #1e90ff 22%,
+    /* Blue */ #32cd32 33%,
+    /* Green */ #008080 44%,
+    /* Teal */ #87cefa 55%,
+    /* Light Blue */ #808080 66%,
+    /* Gray */ #800000 77%,
+    /* Maroon */ #800080 88% /* Purple */
+  );
 }
+
 
 .nav-links {
   list-style: none;
@@ -227,8 +237,18 @@ button:focus {
    FOOTER
    ====================================================== */
 .footer {
- background: #833AB4;
-background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 231, 69, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    #ffa500 0%,
+    /* Orange */ #ffd700 11%,
+    /* Gold */ #1e90ff 22%,
+    /* Blue */ #32cd32 33%,
+    /* Green */ #008080 44%,
+    /* Teal */ #87cefa 55%,
+    /* Light Blue */ #808080 66%,
+    /* Gray */ #800000 77%,
+    /* Maroon */ #800080 88% /* Purple */
+  );
   color: #ffffff;
   text-align: center;
   padding: 2rem;
