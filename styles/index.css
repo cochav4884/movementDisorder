@@ -83,6 +83,33 @@ p {
   background-color: #4f6a80;
 }
 
+/* Navbar Logo */
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+
+  /* Rounded */
+  border-radius: 50%;
+
+  /* Silver background */
+  background-color: silver;
+
+  /* Padding so logo doesn't touch edges */
+  padding: 6px;
+
+  /* Subtle depth */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+@media (min-width: 992px) {
+  .nav-logo {
+    height: 48px;
+  }
+}
+
+
 /* ======================================================
    HERO / JUMBOTRON
    ====================================================== */
