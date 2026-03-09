@@ -1,0 +1,291 @@
+/* ======================================================
+   FOUNDATION COLOR VARIABLES (REVAMPED)
+   ====================================================== */
+:root {
+  --bg-page: #eef1f4;
+  --bg-card: #e2e6ea;
+
+  --foundation-primary: #2f3e4e;
+  --foundation-secondary: #5f7d95;
+
+  --text-heading: #1f2a33;
+  --text-body: #2e2e2e;
+  --text-muted: #5a5a5a;
+
+  --border-soft: #c3c9cf;
+  --focus-ring: #3a7bd5;
+}
+
+/* ======================================================
+   BASE STYLES
+   ====================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-heading);
+}
+
+p {
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+/* ======================================================
+   NAVIGATION
+   ====================================================== */
+.navbar {
+  padding: 1.5rem 2rem;
+   background: linear-gradient(
+    90deg,
+    #ffa500 0%,
+    /* Orange */ #ffd700 11%,
+    /* Gold */ #1e90ff 22%,
+    /* Blue */ #32cd32 33%,
+    /* Green */ #008080 44%,
+    /* Teal */ #87cefa 55%,
+    /* Light Blue */ #808080 66%,
+    /* Gray */ #800000 77%,
+    /* Maroon */ #800080 88% /* Purple */
+  );
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-link-item {
+  background-color: var(--foundation-secondary);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav-link-item:hover {
+  background-color: #4f6a80;
+}
+
+/* Navbar Logo */
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+
+  /* Rounded */
+  border-radius: 50%;
+
+  /* Silver background */
+  background-color: silver;
+
+  /* Padding so logo doesn't touch edges */
+  padding: 6px;
+
+  /* Subtle depth */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+@media (min-width: 992px) {
+  .nav-logo {
+    height: 48px;
+  }
+}
+
+
+/* ======================================================
+   HERO / JUMBOTRON
+   ====================================================== */
+.jumbotron {
+  background-color: var(--bg-card);
+  padding: 3rem 2rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  margin: 1rem 0 2.5rem;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+}
+
+/* ======================================================
+   SUPPORT IMAGE
+   ====================================================== */
+.support-image {
+  background-color: #d5dae0;
+  width: 220px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ======================================================
+   MAIN CONTENT
+   ====================================================== */
+.main-content {
+  padding: 3rem 2rem;
+}
+
+/* ======================================================
+   CARDS
+   ====================================================== */
+.card {
+  background-color: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+}
+
+.card-center {
+  text-align: center;
+}
+
+/* ======================================================
+   RESOURCE ITEMS
+   ====================================================== */
+.resource-item {
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--foundation-secondary);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.resource-item a {
+  color: var(--foundation-primary);
+  text-decoration: underline;
+}
+
+.resource-item a:hover {
+  text-decoration: none;
+}
+
+/* ======================================================
+   CIRCLE ELEMENTS
+   ====================================================== */
+.circle {
+  background-color: #d5dae0;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ======================================================
+   BUTTONS
+   ====================================================== */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button.primary {
+  background-color: var(--foundation-primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+
+button.primary:hover {
+  background-color: #008000;
+}
+
+button.primary:disabled {
+  background-color: #9aa6b2;
+  cursor: not-allowed;
+}
+
+/* ======================================================
+   LINKS & ACCESSIBILITY
+   ====================================================== */
+a {
+  color: var(--foundation-secondary);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* ======================================================
+   CONTACT SECTION
+   ====================================================== */
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+}
+
+.contact-image {
+  width: 120px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #d5dae0;
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+.footer {
+  background: linear-gradient(
+    90deg,
+    #ffa500 0%,
+    /* Orange */ #ffd700 11%,
+    /* Gold */ #1e90ff 22%,
+    /* Blue */ #32cd32 33%,
+    /* Green */ #008080 44%,
+    /* Teal */ #87cefa 55%,
+    /* Light Blue */ #808080 66%,
+    /* Gray */ #800000 77%,
+    /* Maroon */ #800080 88% /* Purple */
+  );
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+/* ======================================================
+   IMAGES
+   ====================================================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
