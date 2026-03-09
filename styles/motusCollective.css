@@ -3,26 +3,64 @@
   width: 500px;
   background-color: #808080;
   border-radius: 50%;
+  border: 5px solid #797979;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* keep text at top */
   align-items: center;
   position: relative;
-  padding-top: 20px;
+  padding: 40px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  overflow: hidden; /* keeps shine inside circle */
+}
+
+.motusText {
+  filter: drop-shadow(3px 3px 4px rgba(0,0,0));
+} 
+
+.circle::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -30%;
+  width: 160%;
+  height: 80%;
+
+  background: linear-gradient(
+    115deg,
+    rgba(255,255,255,0) 40%,
+    rgba(255,255,255,0.35) 50%,
+    rgba(255,255,255,0) 60%
+  );
+
+  transform: rotate(-10deg);
+  pointer-events: none;
 }
 
 .stickFigure {
-  font-size: 6rem;
-  display: block;
-  margin-top: -50px; /* position under curved text */
-  color: #000000
+  font-size: 7.5rem;
+  display: flex;
+  top: -100px; /* position under curved text */
+  color: #000000;
+  position: relative;
+  z-index: 1;
+  /* filter: drop-shadow(3px 3px 4px rgba(0,0,0)); */
 }
 
-.infinityIcon {
-  font-size: 4rem;
-  display: block;
-  margin-top: -20px; /* pull it closer to runner’s foot */
-  transform: rotate(-25deg);
+.infinityWrap{
+  display: flex;
+  gap: 8px;
+  position: relative;              /* space between icons */
+  top: -90px;     /* position under runner */
+  z-index: 1;
+}
+
+.infinityIcon,
+.infinityIcon2{
+  font-size: 5rem;
+  filter: drop-shadow(3px 3px 4px rgba(0,0,0));
+
   background: linear-gradient(
     to right,
     #ffa500,
@@ -35,9 +73,20 @@
     #800000,
     #800080
   );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  z-index: 1;
+}
+
+/* opposite rotations */
+.infinityIcon{
+  transform: rotate(25deg);
+}
+
+.infinityIcon2{
+  transform: rotate(180deg);
+  position: relative;
+  top: 30px;   /* positive moves it DOWN */
 }
