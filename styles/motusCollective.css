@@ -1,0 +1,43 @@
+.circle {
+  height: 500px;
+  width: 500px;
+  background-color: #808080;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* keep text at top */
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+.stickFigure {
+  font-size: 6rem;
+  display: block;
+  margin-top: -50px; /* position under curved text */
+  color: #000000
+}
+
+.infinityIcon {
+  font-size: 4rem;
+  display: block;
+  margin-top: -20px; /* pull it closer to runner’s foot */
+  transform: rotate(-25deg);
+  background: linear-gradient(
+    to right,
+    #ffa500,
+    #ffd700,
+    #1e90ff,
+    #32cd32,
+    #008080,
+    #87cefa,
+    #808080,
+    #800000,
+    #800080
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  z-index: 1;
+}

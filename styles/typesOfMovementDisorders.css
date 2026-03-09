@@ -1,359 +1,325 @@
-/* Section Titles */
+:root {
+  --color-tremor: #ffa500;
+  --color-essential: #ffd700;
+  --color-myoclonus: #1e90ff;
+  --color-dystonia: #32cd32;
+  --color-intention: #008080;
+  --color-postural: #87cefa;
+  --color-parkinsons: #808080;
+  --color-ataxia: #800000;
+  --color-tardive: #800080;
+}
+
+/* SECTION TITLE */
+
 .section-title {
   font-weight: 700;
   border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Expandable cards */
+/* SYMPTOMS */
+
+.symptom-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.symptom-card:hover {
+  transform: translateY(-3px);
+}
+
+/* EXPAND CARDS */
+
 .expand-card {
   background: #fff;
   border-radius: 14px;
   padding: 1rem 1.25rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   border-left: 8px solid transparent;
-  cursor: pointer;
-  transition: background 0.3s;
+  margin-bottom: 1rem;
 }
 
 .expand-card summary {
   font-weight: 600;
-  list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  cursor: pointer;
 }
 
-.expand-card summary::-webkit-details-marker {
-  display: none;
+.icon {
+  transition: transform 0.3s;
 }
 
-/* Arrow icon rotation */
 .expand-card[open] .icon {
   transform: rotate(90deg);
 }
 
-.icon {
-  transition: transform 0.3s ease;
-  font-size: 1.2rem;
-}
-
-.infinity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-auto-rows: 1fr; /* this forces all rows to have equal height */
-  gap: 32px;           /* equal spacing horizontally & vertically */
-  justify-items: center;
-  align-items: start;
-}
-
-/* Icon size */
-.infinity i {
-  font-size: 3rem;
-}
-
-/* Optional: clickable area */
-.infinity {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Subtypes indentation */
-.subtype {
-  margin-left: 1.5rem;
-  opacity: 0.95;
-}
-
-/* Paragraph styling */
 .expand-card p {
   margin-top: 0.75rem;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
-/* Ribbon Colors */
-.ribbon-gray {
-  border-left-color: #808080;
+/* RIBBON COLORS */
+
+.ribbon-orange {
+  border-left-color: var(--color-tremor);
 }
-.ribbon-purple {
-  border-left-color: #800080;
+.ribbon-gray {
+  border-left-color: var(--color-parkinsons);
 }
 .ribbon-green {
-  border-left-color: #008000;
-}
-.ribbon-orange {
-  border-left-color: #ffa500;
-}
-.ribbon-gold {
-  border-left-color: #ffd700;
-}
-.ribbon-blue {
-  border-left-color: #0000ff;
-}
-.ribbon-teal {
-  border-left-color: #008080;
+  border-left-color: var(--color-dystonia);
 }
 .ribbon-maroon {
-  border-left-color: #800000;
+  border-left-color: var(--color-ataxia);
 }
-.ribbon-lightblue {
-  border-left-color: #add8e6;
+/* the multi‑color ribbon is handled by the gradient rule above */
+
+/* Multi-color curved ribbon flush to left edge, visually matching other ribbons */
+.expand-card.ribbon-multi {
+  position: relative;        /* for absolute pseudo-element */
+  border-left: none;         /* remove fallback border */
+  overflow: hidden;          /* keep ribbon inside rounded corners */
+  border-radius: 14px;       /* match other cards */
 }
 
-/* Legend styling */
+.expand-card.ribbon-multi::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;                 /* same width as single-color ribbons */
+  height: 100%;
+  border-radius: 14px 0 0 14px;  /* curved left side to match other ribbons */
+  background: linear-gradient(
+    180deg,                   /* top to bottom like other ribbons */
+    #ffa500,
+    #ffd700,
+    #1e90ff,
+    #32cd32,
+    #008080,
+    #87cefa,
+    #808080,
+    #800000,
+    #800080
+  );
+  z-index: 10;                /* above card background */
+  pointer-events: none;       /* don’t block clicks */
+}
+
+/* CIRCLE ICON */
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #c0c0c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.circle i {
+  font-size: 2.5rem;
+}
+
+/* LEGEND */
+
 .legend {
   font-size: 0.95rem;
 }
+
 .legend-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
+
 .legend-color {
   width: 20px;
   height: 20px;
-  display: inline-block;
   border-radius: 4px;
 }
-.ribbon-primary {
-  background-color: #000;
-} /* Black = Primary disorder */
-.ribbon-subtype {
-  background: linear-gradient(
-    90deg,
-    #ffa500 0%,
-    /* Orange */ #ffd700 11%,
-    /* Gold */ #1e90ff 22%,
-    /* Blue */ #32cd32 33%,
-    /* Green */ #008080 44%,
-    /* Teal */ #87cefa 55%,
-    /* Light Blue */ #808080 66%,
-    /* Gray */ #800000 77%,
-    /* Maroon */ #800080 88% /* Purple */
-  );
-  color: transparent;
+
+.legend-tremor {
+  background-color: var(--color-tremor);
 }
-.ribbon-multicolor::before,
-.ribbon-multicolor::after,
-.ribbon-multicolor span {
-  background: inherit;
+.legend-essential-tremor {
+  background-color: var(--color-essential);
+}
+.legend-myoclonus {
+  background-color: var(--color-myoclonus);
+}
+.legend-dystonia {
+  background-color: var(--color-dystonia);
+}
+.legend-parkinsons {
+  background-color: var(--color-parkinsons);
+}
+.legend-ataxia {
+  background-color: var(--color-ataxia);
+}
+.legend-tardive {
+  background-color: var(--color-tardive);
 }
 
-/* Mobile-friendly spacing (Bootstrap handles grid) */
-@media (max-width: 576px) {
-  .subtype {
-    margin-left: 1rem;
-  }
-}
+/* DIAGRAM */
 
-/* ------------------------------
-   Circle Element
------------------------------- */
-.circle1,
-.circle2,
-.circle3,
-.circle4,
-.circle5,
-.circle6,
-.circle7,
-.circle8,
-.circle9 {
-  background-color: #c0c0c0;
-  box-shadow: 4px 4px 10px rgb(0, 0, 0);
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 1rem auto;
-  border-radius: 50%;
-  overflow: hidden;
+.diagram {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
-.circle10 { 
-  box-shadow: 4px 4px 10px rgb(0, 0, 0);
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 1rem auto;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    90deg,
-    #ffa500 0%,
-    /* Orange */ #ffd700 11%,
-    /* Gold */ #1e90ff 22%,
-    /* Blue */ #32cd32 33%,
-    /* Green */ #008080 44%,
-    /* Teal */ #87cefa 55%,
-    /* Light Blue */ #808080 66%,
-    /* Gray */ #800000 77%,
-    /* Maroon */ #800080 88% /* Purple */
-  );
-}
-.ribbon-multicolor::before,
-.ribbon-multicolor::after,
-.ribbon-multicolor span {
-  background: inherit;
- /* Multi-colored */
+.diagram-point {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #e2e6ea;
+  cursor: pointer;
 }
 
-
-.circle1:hover,
-.circle2:hover,
-.circle3:hover,
-.circle4:hover,
-.circle5:hover,
-.circle6:hover,
-.circle7:hover,
-.circle8:hover,
-.circle9:hover,
-.circle10:hover {
-  box-shadow: 4px 4px 10px rgb(52, 93, 47);
-}
-/*
-.circle1 {
-  border: 10px solid #ffa500; /* Orange
+.diagram-point:hover {
+  background: #d0d6dc;
 }
 
-.circle2 {
-  border: 10px solid #ffd700; /* Gold
+.diagram-info {
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
-.circle3 {
-  border: 10px solid #1e90ff; /* Blue
-}
+/* BACK TO TOP */
 
-.circle4 {
-  border: 10px solid #32cd32; /* Green
-}
-
-.circle5 {
-  border: 10px solid #008080; /* Teal
-}
-
-.circle6 {
-  border: 10px solid #87cefa; /* Light Blue
-}
-
-.circle7 {
-  border: 10px solid #808080; /* Gray
-}
-
-.circle8 {
-  border: 10px solid #800000; /* Maroon
-}
-
-.circle9 {
-  border: 10px solid #800080 !important; /* Purple
-}
-*/
-/*----------------------------
-Font Awesome Integration
-----------------------------*/
-.fa-solid.fa-infinity {
-  font-size: 2.5rem;
-}
-
-.infinity.tremors-general i {
-  color: #ffa500; /* Orange */
-}
-
-.infinity.essential-tremor i {
-  color: #ffd700; /* Gold */
-}
-
-.infinity.resting-tremor i,
-.infinity.myoclonus i {
-  color: #1e90ff; /* Blue */
-}
-
-.infinity.action-tremor i,
-.infinity.dystonia i,
-.infinity.focal-dystonia i,
-.infinity.generalized-dystonia i,
-.infinity.restless-legs-syndrome i,
-.infinity.wilsons-disease i {
-  color: #32cd32; /* Green */
-}
-
-.infinity.intention-tremor i,
-.infinity.progressive-supranuclear-palsy i,
-.infinity.tourette-syndrome i {
-  color: #008080; /* Teal */
-}
-
-.infinity.postural-tremor i,
-.infinity.multiple-system-atrophy i {
-  color: #87cefa; /* Light Blue */
-}
-
-.infinity.parkinsons-disease i {
-  color: #808080; /* Gray */
-}
-
-.infinity.ataxia i,
-.infinity.spinocerebellar-ataxia i,
-.infinity.friedreichs-ataxia i {
-  color: #800000; /* Maroon */
-}
-
-.infinity.tardive-dyskinesia i {
-  color: #800080; /* Purple */
-}
-
-.infinity.awareness i {
-  color: #c0c0c0; /* silver */
-}
-
-
-/*------------------------------ 
-Back to Top Button 
-------------------------------*/
 #backToTop {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 999;
+
   background: linear-gradient(
     90deg,
-    #ffa500 0%,
-    /* Orange */ #ffd700 11%,
-    /* Gold */ #1e90ff 22%,
-    /* Blue */ #32cd32 33%,
-    /* Green */ #008080 44%,
-    /* Teal */ #87cefa 55%,
-    /* Light Blue */ #808080 66%,
-    /* Gray */ #800000 77%,
-    /* Maroon */ #800080 88% /* Purple */
+    #ffa500,
+    #ffd700,
+    #1e90ff,
+    #32cd32,
+    #008080,
+    #87cefa,
+    #808080,
+    #800000,
+    #800080
   );
-}
-.ribbon-multicolor::before,
-.ribbon-multicolor::after,
-.ribbon-multicolor span {
-  background: inherit;
-  color: rgb(0, 0, 0);
+
   border: none;
-  border-radius: 50%;
   width: 48px;
   height: 48px;
+  border-radius: 50%;
+
   font-size: 22px;
-  font-weight:bolder;
-  cursor: pointer;
+  font-weight: bold;
+
   display: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  cursor: pointer;
 }
 
-/* Hover */
 #backToTop:hover {
   transform: scale(1.1);
 }
 
-/* Keyboard focus (ADA) */
-#backToTop:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+/* BODY MAP */
+
+.body-map-container {
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.body-map {
+  width: 100%;
+}
+
+.map-point {
+  position: absolute;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  background: #2f3e4e;
+  color: white;
+  cursor: pointer;
+}
+
+/* approximate positions */
+
+.map-point.head {
+  top: 8%;
+  left: 45%;
+}
+
+.map-point.voice {
+  top: 18%;
+  left: 48%;
+}
+
+.map-point.hands {
+  top: 40%;
+  left: 10%;
+}
+
+.map-point.legs {
+  bottom: 8%;
+  left: 48%;
+}
+
+.map-result {
+  background: #e2e6ea;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* CLASSIFICATION TREE */
+
+.tree,
+.tree ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.tree li {
+  margin: 0.3rem 0;
+  position: relative;
+}
+
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  border-left: 1px solid #aaa;
+  height: 100%;
+}
+
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  border-top: 1px solid #aaa;
+  width: 10px;
+}
+
+.tree span {
+  font-weight: 600;
 }
