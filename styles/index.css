@@ -94,7 +94,7 @@ p {
   border-radius: 50%;
 
   /* Silver background */
-  background-color: silver;
+  background-color: #ffffff;
 
   /* Padding so logo doesn't touch edges */
   padding: 6px;
@@ -262,7 +262,15 @@ button:focus {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #d5dae0;
+  background-color: #ffffff;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ======================================================
