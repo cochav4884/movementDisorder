@@ -72,15 +72,16 @@ p {
 }
 
 .nav-link-item {
+  display: inline-block;
   background-color: var(--foundation-secondary);
-  color: #ffffff;
-  border: none;
+  color: #ffffff !important;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .nav-link-item:hover {
-  background-color: #4f6a80;
+  background-color: #32cd32;
 }
 
 /* Navbar Logo */
@@ -143,6 +144,10 @@ p {
 /* ======================================================
    MAIN CONTENT
    ====================================================== */
+.main-content {
+  padding: 3rem 2rem;
+}
+
 .main-content {
   padding: 3rem 2rem;
 }
