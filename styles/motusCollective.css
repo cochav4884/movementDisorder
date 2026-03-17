@@ -1,92 +1,108 @@
-.circle {
-  height: 500px;
-  width: 500px;
-  background-color: #808080;
-  border-radius: 50%;
-  border: 5px solid #797979;
+/* Body layout */
+body {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* keep text at top */
-  align-items: center;
-  position: relative;
-  padding: 40px;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  overflow: hidden; /* keeps shine inside circle */
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.motusText {
-  filter: drop-shadow(3px 3px 4px rgba(0,0,0));
-} 
+/* Make main take remaining space */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 5rem; /* prevents overlap with footer */
+}
 
-.circle::after {
-  content: "";
+/* =============================
+Circle Container and Stick Figure
+============================= */
+.circleContainer {
+  position: relative;
+  width: 30vw;           /* scales with viewport width */
+  max-width: 250px;      /* maximum size */
+  min-width: 150px;      /* minimum size for small screens */
+  aspect-ratio: 1 / 1;   /* maintain perfect square for circle */
+  margin: 5rem auto;
+}
+
+.circleButton {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.stickFigureOnTop {
   position: absolute;
-  top: -20%;
-  left: -30%;
-  width: 160%;
-  height: 80%;
-
-  background: linear-gradient(
-    115deg,
-    rgba(255,255,255,0) 40%,
-    rgba(255,255,255,0.35) 50%,
-    rgba(255,255,255,0) 60%
-  );
-
-  transform: rotate(-10deg);
+  top: 52.5%;           /* adjust for visual centering */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;           /* fills more of circle */
+  height: auto;
   pointer-events: none;
 }
 
-.stickFigure {
-  font-size: 7.5rem;
-  display: flex;
-  top: -100px; /* position under curved text */
-  color: #000000;
-  position: relative;
-  z-index: 1;
-  /* filter: drop-shadow(3px 3px 4px rgba(0,0,0)); */
+/* Optional SVG curved text */
+.circleText {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: -50% auto 0 auto; /* vertical offset to align with circle */
 }
 
-.infinityWrap{
-  display: flex;
-  gap: 8px;
-  position: relative;              /* space between icons */
-  top: -90px;     /* position under runner */
-  z-index: 1;
+/* =============================
+Responsive Adjustments
+============================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .circleContainer {
+    width: 35vw;
+    max-width: 220px;
+    margin: 4rem auto;
+  }
+
+  .stickFigureOnTop {
+    width: 85%;
+  }
 }
 
-.infinityIcon,
-.infinityIcon2{
-  font-size: 5rem;
-  filter: drop-shadow(3px 3px 4px rgba(0,0,0));
+/* Mobile */
+@media (max-width: 768px) {
+  .circleContainer {
+    width: 50vw;
+    max-width: 180px;
+    margin: 3rem auto;
+  }
 
-  background: linear-gradient(
-    to right,
-    #ffa500,
-    #ffd700,
-    #1e90ff,
-    #32cd32,
-    #008080,
-    #87cefa,
-    #808080,
-    #800000,
-    #800080
-  );
+  .stickFigureOnTop {
+    width: 80%;
+  }
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  .circleText {
+    width: 100%;
+    margin: -45% auto 0 auto;
+  }
 }
 
-/* opposite rotations */
-.infinityIcon{
-  transform: rotate(25deg);
-}
+/* Extra small screens */
+@media (max-width: 480px) {
+  .circleContainer {
+    width: 70vw;
+    max-width: 150px;
+    margin: 2rem auto;
+  }
 
-.infinityIcon2{
-  transform: rotate(180deg);
-  position: relative;
-  top: 30px;   /* positive moves it DOWN */
+  .stickFigureOnTop {
+    width: 75%;
+  }
+
+  .circleText {
+    width: 100%;
+    margin: -40% auto 0 auto;
+  }
 }
