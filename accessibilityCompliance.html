@@ -24,7 +24,7 @@
     <link rel="manifest" href="Public/site.webmanifest" />
 
     <link rel="stylesheet" href="styles/index.css" />
-    <link rel="stylesheet" href="styles/typesOfMovementDisorders.css">
+    <link rel="stylesheet" href="styles/typesOfMovementDisorders.css" />
 
     <!-- Bootstrap -->
     <link
@@ -95,12 +95,6 @@ NAVIGATION
                 >
               </li>
 
-              <li class="nav-item mx-1">
-                <a href="reliefIdeas.html" class="nav-link nav-link-item"
-                  >Relief Ideas</a
-                >
-              </li>
-
               <li class="nav-item dropdown mx-2">
                 <a
                   class="nav-link dropdown-toggle nav-link-item"
@@ -114,6 +108,12 @@ NAVIGATION
                 </a>
 
                 <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="reliefIdeas.html"
+                      >Relief Ideas</a
+                    >
+                  </li>
+
                   <li>
                     <a class="dropdown-item" href="community.html">Community</a>
                   </li>
@@ -249,82 +249,60 @@ FOOTER
         </p>
       </div>
     </footer>
-    
- <!-- BACK TO TOP -->
 
-<button type="button" id="backToTop">↑</button>
+    <!-- BACK TO TOP -->
 
+    <button type="button" id="backToTop">↑</button>
 
-<script>
+    <script>
+      const backToTop = document.getElementById("backToTop");
 
-const backToTop = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
 
-window.addEventListener("scroll", () => {
+      backToTop.onclick = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
 
-if (window.scrollY > 400) {
-backToTop.style.display = "block";
-} else {
-backToTop.style.display = "none";
-}
+      const diagramInfo = document.getElementById("diagram-info");
 
-});
+      document.querySelector(".head").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Head:</strong> Tremor, Dystonia, Tourette Syndrome";
+      };
 
-backToTop.onclick = () => {
+      document.querySelector(".hands").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Hands:</strong> Essential Tremor, Parkinson’s Disease";
+      };
 
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
+      document.querySelector(".legs").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Legs:</strong> Ataxia, Restless Legs Syndrome";
+      };
 
-};
+      document.querySelector(".voice").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Voice:</strong> Vocal Tremor, Laryngeal Dystonia";
+      };
 
+      const points = document.querySelectorAll(".map-point");
+      const result = document.getElementById("map-result");
 
-const diagramInfo = document.getElementById("diagram-info");
-
-document.querySelector(".head").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Head:</strong> Tremor, Dystonia, Tourette Syndrome";
-
-};
-
-document.querySelector(".hands").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Hands:</strong> Essential Tremor, Parkinson’s Disease";
-
-};
-
-document.querySelector(".legs").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Legs:</strong> Ataxia, Restless Legs Syndrome";
-
-};
-
-document.querySelector(".voice").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Voice:</strong> Vocal Tremor, Laryngeal Dystonia";
-
-};
-
-const points = document.querySelectorAll(".map-point");
-const result = document.getElementById("map-result");
-
-points.forEach(point => {
-
-point.addEventListener("click", () => {
-
-result.innerHTML =
-"<strong>Possible conditions:</strong><br>" +
-point.dataset.info;
-
-});
-
-});
-
-</script>
-
+      points.forEach((point) => {
+        point.addEventListener("click", () => {
+          result.innerHTML =
+            "<strong>Possible conditions:</strong><br>" + point.dataset.info;
+        });
+      });
+    </script>
   </body>
 </html>
