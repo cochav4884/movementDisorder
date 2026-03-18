@@ -16,6 +16,7 @@
 <link rel="manifest" href="Public/site.webmanifest" />
 
 <link rel="stylesheet" href="styles/index.css"/>
+<link rel="stylesheet" href="styles/typesOfMovementDisorders.css">
 
 <!-- Bootstrap -->
 <link rel="stylesheet"
@@ -39,7 +40,7 @@ NAVIGATION
 
 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
 
-<img src="images/motusCollectiveLogo2.jpg"
+<img src="images/logoCover.png"
 alt="Motus Collective Logo"
 class="nav-logo">
 
@@ -223,9 +224,118 @@ Get Involved
 
     </main>
 
-    <!-- Footer -->
+<!-- =========================
+FOOTER
+========================= -->
+
     <footer class="footer">
-      <p>&copy; 2026 Movement Disorder Awareness Project</p>
+      <div class="footer-content">
+
+        <!-- Image placed between text  -->
+        <img
+          src="images/logoCover.png"
+          alt="Motus Collective Logo"
+          class="footer-logo"
+        />
+
+        <p>
+          <a href="privacyPolicy.html" class="privacyPolicyTermsOfUse"
+            >Privacy Policy</a
+          >
+          |
+          <a href="termsOfUse.html" class="privacyPolicyTermsOfUse"
+            >Terms of Use</a
+          >
+        </p>
+
+        <p class="mt-3">
+          If you or someone you know is struggling or in crisis, help is
+          available. Call or text <strong>988</strong> to reach the Suicide &
+          Crisis Lifeline.
+        </p>
+
+        <p class="mb-0 mt-3">
+          © 2026 Motus Collective • Movement Disorder Education • Community •
+          Research Awareness
+        </p>
+      </div>
     </footer>
+
+ <!-- BACK TO TOP -->
+
+<button type="button" id="backToTop">↑</button>
+
+
+<script>
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+if (window.scrollY > 400) {
+backToTop.style.display = "block";
+} else {
+backToTop.style.display = "none";
+}
+
+});
+
+backToTop.onclick = () => {
+
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+
+};
+
+
+const diagramInfo = document.getElementById("diagram-info");
+
+document.querySelector(".head").onclick = () => {
+
+diagramInfo.innerHTML =
+"<strong>Head:</strong> Tremor, Dystonia, Tourette Syndrome";
+
+};
+
+document.querySelector(".hands").onclick = () => {
+
+diagramInfo.innerHTML =
+"<strong>Hands:</strong> Essential Tremor, Parkinson’s Disease";
+
+};
+
+document.querySelector(".legs").onclick = () => {
+
+diagramInfo.innerHTML =
+"<strong>Legs:</strong> Ataxia, Restless Legs Syndrome";
+
+};
+
+document.querySelector(".voice").onclick = () => {
+
+diagramInfo.innerHTML =
+"<strong>Voice:</strong> Vocal Tremor, Laryngeal Dystonia";
+
+};
+
+const points = document.querySelectorAll(".map-point");
+const result = document.getElementById("map-result");
+
+points.forEach(point => {
+
+point.addEventListener("click", () => {
+
+result.innerHTML =
+"<strong>Possible conditions:</strong><br>" +
+point.dataset.info;
+
+});
+
+});
+
+</script>
+
   </body>
 </html>

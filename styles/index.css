@@ -86,18 +86,13 @@ p {
 
 /* Navbar Logo */
 .nav-logo {
-  height: 40px;
-  width: 40px;
-  object-fit: contain;
+  background-color: #808080;
+
+  max-width: 5rem;
+  max-height: 5rem;
 
   /* Rounded */
   border-radius: 50%;
-
-  /* Silver background */
-  background-color: #ffffff;
-
-  /* Padding so logo doesn't touch edges */
-  padding: 6px;
 
   /* Subtle depth */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
@@ -276,23 +271,53 @@ button:focus {
 /* ======================================================
    FOOTER
    ====================================================== */
+
 .footer {
   background: linear-gradient(
     90deg,
-    #ffa500 0%,
-    /* Orange */ #ffd700 11%,
-    /* Gold */ #1e90ff 22%,
-    /* Blue */ #32cd32 33%,
-    /* Green */ #008080 44%,
-    /* Teal */ #87cefa 55%,
-    /* Light Blue */ #808080 66%,
-    /* Gray */ #800000 77%,
-    /* Maroon */ #800080 88% /* Purple */
+    #ffa500 0%, #ffd700 11%, #1e90ff 22%,
+    #32cd32 33%, #008080 44%, #87cefa 55%,
+    #808080 66%, #800000 77%, #800080 88%
   );
-  color: #ffffff;
-  text-align: center;
-  padding: 2rem;
+  color: #fff;
+  padding: 3rem 2rem;
   border-radius: 6px;
+
+  display: flex;
+  justify-content: center;  /* center the container */
+}
+
+.footer-content {
+  max-width: 800px;      /* keeps content from being too wide */
+  width: 100%;
+  text-align: center;     /* center text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* center image and text */
+  gap: 1rem;              /* spacing between paragraphs and image */
+}
+
+.footer-logo {
+ background-color: #808080;
+
+  max-width: 5rem;
+  max-height: 5rem;
+
+  /* Rounded */
+  border-radius: 50%;
+
+  /* Subtle depth */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.privacyPolicyTermsOfUse {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.privacyPolicyTermsOfUse:hover {
+  text-decoration: underline;
+  color: #800000;
 }
 
 /* ======================================================
