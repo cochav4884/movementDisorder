@@ -17,6 +17,7 @@
 
 <link rel="stylesheet" href="styles/index.css"/>
 <link rel="stylesheet" href="styles/typesOfMovementDisorders.css">
+<link rel="stylesheet" href="styles/community.css ">
 
 <!-- Bootstrap -->
 <link rel="stylesheet"
@@ -197,6 +198,21 @@ FUTURE COMMUNITY FEATURES
 
 </section>
 
+ <!-- =========================
+       Disqus Community Forum
+  ========================= -->
+<section class="card mb-4 p-3">
+  <h2 class="section-title">Community Forum</h2>
+  <p>Share your experiences, ask questions, and connect with others living with movement disorders.</p>
+
+  <!-- Disqus Embed -->
+  <div id="disqus_thread"></div>
+  <noscript>
+    Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+</section>
+
 
 <!-- =========================
 GET INVOLVED
@@ -227,7 +243,7 @@ GET INVOLVED
 SUPPORTIVE MESSAGE
 ========================= -->
 
-<section class="card card-center">
+<section class="container card mb-4">
 
   <h2 class="section-title">You Are Not Alone</h2>
 
@@ -313,51 +329,21 @@ behavior: "smooth"
 };
 
 
-const diagramInfo = document.getElementById("diagram-info");
+</script>
 
-document.querySelector(".head").onclick = () => {
+<!-- Disqus Script -->
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;  // Current page URL
+    this.page.identifier = "community_page"; // Unique page identifier
+  };
 
-diagramInfo.innerHTML =
-"<strong>Head:</strong> Tremor, Dystonia, Tourette Syndrome";
-
-};
-
-document.querySelector(".hands").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Hands:</strong> Essential Tremor, Parkinson’s Disease";
-
-};
-
-document.querySelector(".legs").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Legs:</strong> Ataxia, Restless Legs Syndrome";
-
-};
-
-document.querySelector(".voice").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Voice:</strong> Vocal Tremor, Laryngeal Dystonia";
-
-};
-
-const points = document.querySelectorAll(".map-point");
-const result = document.getElementById("map-result");
-
-points.forEach(point => {
-
-point.addEventListener("click", () => {
-
-result.innerHTML =
-"<strong>Possible conditions:</strong><br>" +
-point.dataset.info;
-
-});
-
-});
-
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://motus-collective.disqus.com/embed.js'; // Your shortname
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
 
 </body>
