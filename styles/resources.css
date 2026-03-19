@@ -1,0 +1,30 @@
+/* ======================================================
+   RESEARCH CARDS
+   ====================================================== */
+.research-card {
+  border-left: 6px solid var(--foundation-primary);
+}
+
+/* ======================================================
+   REFERENCE SECTION (INSIDE CARD)
+   ====================================================== */
+.reference-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+.reference-section h5 {
+  margin-bottom: 0.75rem;
+  color: var(--foundation-secondary);
+}
+
+.reference-section ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.reference-section li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
