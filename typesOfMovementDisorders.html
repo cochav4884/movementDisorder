@@ -1,577 +1,664 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motus Collective | Movement Disorder Education & Support</title>
 
-<title>Motus Collective | Movement Disorder Education & Support</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="Public/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="Public/favicon.svg" />
+    <link rel="shortcut icon" href="Public/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Public/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Motus Collective" />
+    <link rel="manifest" href="Public/site.webmanifest" />
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="Public/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="Public/favicon.svg" />
-<link rel="shortcut icon" href="Public/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="Public/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="Motus Collective" />
-<link rel="manifest" href="Public/site.webmanifest" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/typesOfMovementDisorders.css" />
 
-<link rel="stylesheet" href="styles/index.css"/>
-<link rel="stylesheet" href="styles/typesOfMovementDisorders.css">
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
 
-<!-- Bootstrap -->
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</head>
-
-<body>
-
-<!-- =========================
+  <body>
+    <!-- =========================
 NAVIGATION
 ========================= -->
 
-<header>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <img
+              src="images/logoLighter.png"
+              alt="Motus Collective Logo"
+              class="nav-logo"
+            />
+            <span class="fw-bold">Motus Collective</span>
+          </a>
 
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img 
-          src="images/logoLighter.png"
-          alt="Motus Collective Logo"
-          class="nav-logo">
-        <span class="fw-bold">Motus Collective</span>
-      </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            title="Toggle navigation"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        title="Toggle navigation"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- ✅ EVERYTHING must be inside this UL -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-1">
+                <a href="community.html" class="nav-link nav-link-item"
+                  >Community</a
+                >
+              </li>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+              <li class="nav-item mx-1">
+                <a href="mission.html" class="nav-link nav-link-item"
+                  >Mission</a
+                >
+              </li>
 
-        <!-- ✅ EVERYTHING must be inside this UL -->
-        <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-1">
+                <a href="index.html" class="nav-link nav-link-item">Home</a>
+              </li>
 
-          <li class="nav-item mx-1">
-            <a href="community.html" class="nav-link nav-link-item">Community</a>
-          </li>
+              <!-- SERVICES DROPDOWN -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle nav-link-item"
+                  href="#"
+                  id="servicesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
 
-          <li class="nav-item mx-1">
-            <a href="mission.html" class="nav-link nav-link-item">Mission</a>
-          </li>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="education.html">Education</a>
+                  </li>
+                </ul>
+              </li>
 
-          <li class="nav-item mx-1">
-            <a href="index.html" class="nav-link nav-link-item">Home</a>
-          </li>
+              <!-- GET INVOLVED DROPDOWN -->
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle nav-link-item"
+                  href="#"
+                  id="getInvolvedDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Get Involved
+                </a>
 
-          <!-- SERVICES DROPDOWN -->
-          <li class="nav-item dropdown mx-2">
-            <a class="nav-link dropdown-toggle nav-link-item"
-               href="#"
-               id="servicesDropdown"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false">
-              Services
-            </a>
-
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="education.html">Education</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="reliefIdeas.html"
+                      >Relief Ideas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="donationPage.html"
+                      >Donation Page</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="contact.html">Contact</a>
+                  </li>
+                </ul>
               </li>
             </ul>
-          </li>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-          <!-- GET INVOLVED DROPDOWN -->
-          <li class="nav-item dropdown mx-2">
-            <a class="nav-link dropdown-toggle nav-link-item"
-               href="#"
-               id="getInvolvedDropdown"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false">
-              Get Involved
-            </a>
+    <!-- HERO -->
 
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="reliefIdeas.html">Relief Ideas</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="donationPage.html">Donation Page</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </li>
+    <br>
+    <br>
 
-        </ul>
 
+    <section class="container card mb-5">
+      
+        <h2 class="section-title">Understanding Movement Disorders</h2>
+
+        <p>
+          Movement disorders are neurological conditions that affect the speed,
+          coordination, or control of voluntary and involuntary movement. This
+          guide highlights major types of movement disorders and provides
+          trusted medical resources for further learning.
+        </p>
+      
+    </section>
+
+    <!-- SYMPTOMS QUICK GUIDE -->
+
+    <section class="container card mb-5">
+      <h2 class="section-title">Symptoms Quick Guide</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="symptom-card" data-target="tremors">
+            <h5>Tremor / Shaking</h5>
+            <p>Rhythmic shaking of hands, head, or voice.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="symptom-card" data-target="rigidity">
+            <h5>Muscle Rigidity</h5>
+            <p>Stiffness and resistance to movement.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="symptom-card" data-target="coordination">
+            <h5>Loss of Coordination</h5>
+            <p>Difficulty walking or maintaining balance.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="symptom-card" data-target="slow">
+            <h5>Slow Movement</h5>
+            <p>Slowed voluntary movements.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="symptom-card" data-target="involuntary">
+            <h5>Involuntary Movements</h5>
+            <p>Sudden jerks or spasms.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </section>
 
+    <!-- =========================
+SELF ASSESSMENT
+========================= -->
 
-<!-- HERO -->
+    <section class="container card mb-5">
+      <h2 class="section-title">Symptom Awareness & Self-Reflection</h2>
 
-<section class="container">
+      <p>
+        Tracking symptom patterns can help individuals better communicate with
+        medical professionals and understand changes over time.
+      </p>
 
-<div class="jumbotron text-center">
+      <h4>Available Self-Assessment Tools</h4>
 
-<h1>Understanding Movement Disorders</h1>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="resource-item">
+            <p>
+              <strong>Self-Assessment Printable Sheets</strong>
+              offers downloadable templates for tracking symptoms, triggers, and
+              relief strategies.
+            </p>
 
-<p>
+            <a
+              href="https://www.bing.com/images/search?q=printable+sheets+for+future+self-assessment+tools+for+movement+disorder+individuals&qpvt=printable+sheets+for+Future+self-assessment+tools+for+movement+disorder+individuals&form=IGRE&first=1"
+              target="_blank"
+              rel="noopener"
+            >
+              <button type="button" class="primary">Try It Out!</button>
+            </a>
+          </div>
+        </div>
 
-Movement disorders are neurological conditions that affect the speed,
-coordination, or control of voluntary and involuntary movement.
+        <div class="col-md-6">
+          <div class="resource-item">
+            <p>
+              <strong>Functional Movement Disorder</strong>
+              provides assessment tools and resources for individuals with
+              functional movement disorders.
+            </p>
 
-This guide highlights major types of movement disorders and provides
-trusted medical resources for further learning.
+            <a
+              href="https://www.reactivept.com/single-post/fmdassessment"
+              target="_blank"
+              rel="noopener"
+            >
+              <button type="button" class="primary">Try It Out!</button>
+            </a>
+          </div>
+        </div>
 
-</p>
+        <div class="col-md-6">
+          <div class="resource-item">
+            <p>
+              <strong>Functional Mobility Assessment (FMA)</strong>
+              provides assessment tools and resources for individuals with
+              functional movement disorders.
+            </p>
 
+            <a
+              href="https://www.reactivept.com/single-post/fmdassessment"
+              target="_blank"
+              rel="noopener"
+            >
+              <button type="button" class="primary">Try It Out!</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="resource-item">
+            <p>
+              <strong>Performance Assessment of Self-Care Skills (PASS)</strong>
+              provides assessment tools and resources for individuals with
+              movement disorders.
+            </p>
+
+            <a
+              href="https://www.movementdisorders.org/MDS/Tools.htm"
+              target="_blank"
+              rel="noopener"
+            >
+              <button type="button" class="primary">Try It Out!</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOR LEGEND -->
+
+    <section class="container card mb-5">
+      <h2 class="section-title">Movement Disorder Color Guide</h2>
+
+      <div class="legend d-flex flex-wrap gap-3">
+        <div class="legend-item">
+          <span class="legend-color legend-tremor"></span> Tremor Disorders
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color legend-essential-tremor"></span> Essential
+          Tremor
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color legend-myoclonus"></span> Myoclonus
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color legend-dystonia"></span> Dystonia
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color legend-parkinsons"></span> Parkinson's
+          Disease
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color legend-ataxia"></span> Ataxia Disorders
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-color legend-tardive"></span> Tardive Dyskinesia
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVEMENT DISORDER CARDS -->
+
+    <section class="container card mb-5 disorder-section">
+      <h2 class="section-title">Movement Disorder Categories</h2>
+
+      <!-- TREMOR -->
+
+      <details class="expand-card ribbon-orange">
+        <summary>
+          Tremor Disorders
+
+          <span class="icon">▶</span>
+        </summary>
+
+        <a
+          href="https://www.ninds.nih.gov/health-information/disorders/tremor"
+          target="_blank"
+          rel="noopener"
+          title="Tremor info"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity tremors-general"></i>
+          </div>
+        </a>
+
+        <p>
+          Tremors are rhythmic, involuntary shaking movements affecting various
+          parts of the body.
+        </p>
+
+        <p class="subtype">
+          Essential Tremor • Postural Tremor • Intention Tremor • Resting Tremor
+        </p>
+      </details>
+
+      <!-- PARKINSONIAN -->
+
+      <details class="expand-card ribbon-gray">
+        <summary>
+          Parkinsonian Disorders
+
+          <span class="icon">▶</span>
+        </summary>
+
+        <a
+          href="https://www.ninds.nih.gov/health-information/disorders/parkinsons-disease"
+          target="_blank"
+          rel="noopener"
+          title="Parkinsons info"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity parkinsons-disease"></i>
+          </div>
+        </a>
+
+        <p>
+          Parkinsonian disorders involve slowed movement, rigidity, tremor, and
+          impaired balance.
+        </p>
+
+        <p class="subtype">
+          Parkinson’s Disease • Multiple System Atrophy • Progressive
+          Supranuclear Palsy
+        </p>
+      </details>
+
+      <!-- DYSTONIA -->
+
+      <details class="expand-card ribbon-green">
+        <summary>
+          Dystonia
+
+          <span class="icon">▶</span>
+        </summary>
+
+        <a
+          href="https://www.ninds.nih.gov/health-information/disorders/dystonia"
+          target="_blank"
+          rel="noopener"
+          title="Dystonia info"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity dystonia"></i>
+          </div>
+        </a>
+
+        <p>
+          Dystonia causes sustained or repetitive muscle contractions resulting
+          in abnormal postures or twisting movements.
+        </p>
+
+        <p class="subtype">
+          Focal Dystonia • Segmental Dystonia • Generalized Dystonia
+        </p>
+      </details>
+
+      <!-- ATAXIA -->
+
+      <details class="expand-card ribbon-maroon">
+        <summary>
+          Ataxia Disorders
+
+          <span class="icon">▶</span>
+        </summary>
+
+        <a
+          href="https://www.ninds.nih.gov/health-information/disorders/ataxia"
+          target="_blank"
+          rel="noopener"
+          title="Ataxia info"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity ataxia"></i>
+          </div>
+        </a>
+
+        <p>
+          Ataxia refers to impaired coordination and balance due to cerebellar
+          dysfunction.
+        </p>
+
+        <p class="subtype">Spinocerebellar Ataxia • Friedreich’s Ataxia</p>
+      </details>
+
+      <!-- OTHER MOVEMENT DISORDERS CARD -->
+      <details class="expand-card ribbon-multi">
+        <summary>
+          Other Movement Disorders
+          <span class="icon">▶</span>
+        </summary>
+
+        <!-- Tourette Syndrome -->
+        <a
+          href="https://tourette.org"
+          target="_blank"
+          rel="noopener"
+          title="Tourette Syndrome"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity tourette-syndrome"></i>
+          </div>
+        </a>
+        <p>
+          Tourette Syndrome: Involuntary motor and vocal tics. <b>Click</b> the
+          circle to learn more.
+        </p>
+
+        <!-- Tardive Dyskinesia -->
+        <a
+          href="https://my.clevelandclinic.org/health/diseases/12120-tardive-dyskinesia"
+          target="_blank"
+          rel="noopener"
+          title="Tardive Dyskinesia"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity tardive-dyskinesia"></i>
+          </div>
+        </a>
+        <p>
+          Tardive Dyskinesia: Involuntary repetitive movements, often
+          medication-induced. <b>Click</b> the circle to learn more.
+        </p>
+
+        <!-- Myoclonus -->
+        <a
+          href="https://www.ninds.nih.gov/health-information/disorders/myoclonus"
+          target="_blank"
+          rel="noopener"
+          title="Myoclonus"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity myoclonus"></i>
+          </div>
+        </a>
+        <p>
+          Myoclonus: Sudden, brief involuntary muscle jerks. <b>Click</b> the
+          circle to learn more.
+        </p>
+
+        <!-- Restless Legs Syndrome -->
+        <a
+          href="https://www.rls.org"
+          target="_blank"
+          rel="noopener"
+          title="Restless Legs Syndrome"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity restless-legs-syndrome"></i>
+          </div>
+        </a>
+        <p>
+          Restless Legs Syndrome: Uncomfortable leg sensations with an urge to
+          move. <b>Click</b> the circle to learn more.
+        </p>
+
+        <!-- Wilson's Disease -->
+        <a
+          href="https://www.wilsondisease.org"
+          target="_blank"
+          rel="noopener"
+          title="Wilson's Disease"
+        >
+          <div class="circle">
+            <i class="fa-solid fa-infinity wilsons-disease"></i>
+          </div>
+        </a>
+        <p>
+          Wilson's Disease: Genetic copper buildup affecting movement and liver
+          function. <b>Click</b> the circle to learn more.
+        </p>
+      </details>
+    </section>
+
+    <!-- CLASSIFICATION -->
+
+    <section class="container card mb-5">
+      <h2 class="section-title text-center">
+        Movement Disorder Classification
+      </h2>
+
+      <ul class="tree">
+        <li>
+          <span>Movement Disorders</span>
+
+          <ul>
+            <li>
+              <span>Tremor Disorders</span>
+              <ul>
+                <li>Essential Tremor</li>
+                <li>Postural Tremor</li>
+                <li>Resting Tremor</li>
+                <li>Intention Tremor</li>
+              </ul>
+            </li>
+
+            <li>
+              <span>Parkinsonian Disorders</span>
+              <ul>
+                <li>Parkinson's Disease</li>
+                <li>Multiple System Atrophy</li>
+                <li>Progressive Supranuclear Palsy</li>
+              </ul>
+            </li>
+
+            <li>
+              <span>Dystonia</span>
+              <ul>
+                <li>Focal Dystonia</li>
+                <li>Segmental Dystonia</li>
+                <li>Generalized Dystonia</li>
+              </ul>
+            </li>
+
+            <li>
+              <span>Ataxia</span>
+              <ul>
+                <li>Spinocerebellar Ataxia</li>
+                <li>Friedreich's Ataxia</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- INTERACTIVE BODY MAP -->
+
+<section class="container card mb-5">
+
+  <h2 class="section-title text-center">Interactive Body Map</h2>
+
+  <p>
+    Choose a body region to see possible related conditions.
+  </p>
+
+ <div class="body-map-container">
+  <img
+    src="images/bodyMap.png"
+    class="body-map"
+    alt="Stick figure human body outline"
+  />
+
+  <button
+    type="button"
+    class="map-point head"
+    data-info="Head tremor, dystonia, Tourette syndrome"
+  >
+    Head
+  </button>
+
+  <button
+    type="button"
+    class="map-point hands"
+    data-info="Essential tremor, Parkinson’s disease"
+  >
+    Hands
+  </button>
+
+  <button
+    type="button"
+    class="map-point legs"
+    data-info="Ataxia, restless legs syndrome"
+  >
+    Legs
+  </button>
+
+  <button
+    type="button"
+    class="map-point voice"
+    data-info="Vocal tremor, laryngeal dystonia"
+  >
+    Voice
+  </button>
 </div>
 
-</section>
-
-<!-- SYMPTOMS QUICK GUIDE -->
-
-<section class="container mb-5">
-
-<h2 class="section-title">Symptoms Quick Guide</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-<div class="symptom-card" data-target="tremors">
-<h5>Tremor / Shaking</h5>
-<p>Rhythmic shaking of hands, head, or voice.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="symptom-card" data-target="rigidity">
-<h5>Muscle Rigidity</h5>
-<p>Stiffness and resistance to movement.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="symptom-card" data-target="coordination">
-<h5>Loss of Coordination</h5>
-<p>Difficulty walking or maintaining balance.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="symptom-card" data-target="slow">
-<h5>Slow Movement</h5>
-<p>Slowed voluntary movements.</p>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="symptom-card" data-target="involuntary">
-<h5>Involuntary Movements</h5>
-<p>Sudden jerks or spasms.</p>
-</div>
-</div>
-
-</div>
-
-<!-- COLOR LEGEND -->
-
-<section class="container mb-5">
-
-<h2 class="section-title">Movement Disorder Color Guide</h2>
-
-<div class="legend d-flex flex-wrap gap-3">
-
-<div class="legend-item">
-<span class="legend-color legend-tremor"></span> Tremor Disorders
-</div>
-
-<div class="legend-item">
-<span class="legend-color legend-essential-tremor"></span> Essential Tremor
-</div>
-
-<div class="legend-item">
-<span class="legend-color legend-myoclonus"></span> Myoclonus
-</div>
-
-<div class="legend-item">
-<span class="legend-color legend-dystonia"></span> Dystonia
-</div>
-
-<div class="legend-item">
-<span class="legend-color legend-parkinsons"></span> Parkinson's Disease
-</div>
-
-<div class="legend-item">
-<span class="legend-color legend-ataxia"></span> Ataxia Disorders
-</div>
-
-<div class="legend-item">
-<span class="legend-color legend-tardive"></span> Tardive Dyskinesia
-</div>
-
-</div>
-
-</section>
-
-
-<!-- MOVEMENT DISORDER CARDS -->
-
-<section class="container mb-5 disorder-section">
-
-<h2 class="section-title">Movement Disorder Categories</h2>
-
-
-<!-- TREMOR -->
-
-<details class="expand-card ribbon-orange">
-
-<summary>
-
-Tremor Disorders
-
-<span class="icon">▶</span>
-
-</summary>
-
-<a href="https://www.ninds.nih.gov/health-information/disorders/tremor" 
-   target="_blank" 
-   rel="noopener"
-   title="Tremor info">
-  <div class="circle">
-    <i class="fa-solid fa-infinity tremors-general"></i>
+  <div id="map-result" class="map-result text-center">
+    Click on body region.
   </div>
-</a>
-
-<p>
-
-Tremors are rhythmic, involuntary shaking movements affecting
-various parts of the body.
-
-</p>
-
-<p class="subtype">
-
-Essential Tremor • Postural Tremor • Intention Tremor • Resting Tremor
-
-</p>
-
-</details>
-
-
-<!-- PARKINSONIAN -->
-
-<details class="expand-card ribbon-gray">
-
-<summary>
-
-Parkinsonian Disorders
-
-<span class="icon">▶</span>
-
-</summary>
-
-<a href="https://www.ninds.nih.gov/health-information/disorders/parkinsons-disease" 
-   target="_blank" 
-   rel="noopener"
-   title="Parkinsons info">
-  <div class="circle">
-    <i class="fa-solid fa-infinity parkinsons-disease"></i>
-  </div>
-</a>
-
-<p>
-
-Parkinsonian disorders involve slowed movement,
-rigidity, tremor, and impaired balance.
-
-</p>
-
-<p class="subtype">
-
-Parkinson’s Disease • Multiple System Atrophy • Progressive Supranuclear Palsy
-
-</p>
-
-</details>
-
-
-<!-- DYSTONIA -->
-
-<details class="expand-card ribbon-green">
-
-<summary>
-
-Dystonia
-
-<span class="icon">▶</span>
-
-</summary>
-
-<a href="https://www.ninds.nih.gov/health-information/disorders/dystonia" 
-   target="_blank" 
-   rel="noopener"
-   title="Dystonia info">
-  <div class="circle">
-    <i class="fa-solid fa-infinity dystonia"></i>
-  </div>
-</a>
-
-<p>
-
-Dystonia causes sustained or repetitive muscle contractions
-resulting in abnormal postures or twisting movements.
-
-</p>
-
-<p class="subtype">
-
-Focal Dystonia • Segmental Dystonia • Generalized Dystonia
-
-</p>
-
-</details>
-
-
-<!-- ATAXIA -->
-
-<details class="expand-card ribbon-maroon">
-
-<summary>
-
-Ataxia Disorders
-
-<span class="icon">▶</span>
-
-</summary>
-
-<a href="https://www.ninds.nih.gov/health-information/disorders/ataxia" 
-   target="_blank" 
-   rel="noopener"
-   title="Ataxia info">
-  <div class="circle">
-    <i class="fa-solid fa-infinity ataxia"></i>
-  </div>
-</a>
-
-<p>
-
-Ataxia refers to impaired coordination and balance due to
-cerebellar dysfunction.
-
-</p>
-
-<p class="subtype">
-
-Spinocerebellar Ataxia • Friedreich’s Ataxia
-
-</p>
-
-</details>
-
-<!-- OTHER MOVEMENT DISORDERS CARD -->
-<details class="expand-card ribbon-multi">
-  <summary>
-    Other Movement Disorders
-    <span class="icon">▶</span>
-  </summary>
-
-  <!-- Tourette Syndrome -->
-  <a href="https://tourette.org" target="_blank" rel="noopener" title="Tourette Syndrome">
-    <div class="circle">
-      <i class="fa-solid fa-infinity tourette-syndrome"></i>
-    </div>
-  </a>
-  <p>Tourette Syndrome: Involuntary motor and vocal tics. <b>Click</b> the circle to learn more.</p>
-
-  <!-- Tardive Dyskinesia -->
-  <a href="https://my.clevelandclinic.org/health/diseases/12120-tardive-dyskinesia" target="_blank" rel="noopener" title="Tardive Dyskinesia">
-    <div class="circle">
-      <i class="fa-solid fa-infinity tardive-dyskinesia"></i>
-    </div>
-  </a>
-  <p>Tardive Dyskinesia: Involuntary repetitive movements, often medication-induced. <b>Click</b> the circle to learn more.</p>
-
-  <!-- Myoclonus -->
-  <a href="https://www.ninds.nih.gov/health-information/disorders/myoclonus" target="_blank" rel="noopener" title="Myoclonus">
-    <div class="circle">
-      <i class="fa-solid fa-infinity myoclonus"></i>
-    </div>
-  </a>
-  <p>Myoclonus: Sudden, brief involuntary muscle jerks. <b>Click</b> the circle to learn more.</p>
-
-  <!-- Restless Legs Syndrome -->
-  <a href="https://www.rls.org" target="_blank" rel="noopener" title="Restless Legs Syndrome">
-    <div class="circle">
-      <i class="fa-solid fa-infinity restless-legs-syndrome"></i>
-    </div>
-  </a>
-  <p>Restless Legs Syndrome: Uncomfortable leg sensations with an urge to move. <b>Click</b> the circle to learn more.</p>
-
-  <!-- Wilson's Disease -->
-  <a href="https://www.wilsondisease.org" target="_blank" rel="noopener" title="Wilson's Disease">
-    <div class="circle">
-      <i class="fa-solid fa-infinity wilsons-disease"></i>
-    </div>
-  </a>
-  <p>Wilson's Disease: Genetic copper buildup affecting movement and liver function. <b>Click</b> the circle to learn more.</p>
-
-</details>
 
 </section>
 
-<section class="container mb-5">
-
-<h2 class="section-title text-center">
-Movement Disorder Classification
-</h2>
-
-<ul class="tree"> 
-
-<li>
-<span>Movement Disorders</span>
-
-<ul>
-
-<li>
-<span>Tremor Disorders</span>
-<ul>
-<li>Essential Tremor</li>
-<li>Postural Tremor</li>
-<li>Resting Tremor</li>
-<li>Intention Tremor</li>
-</ul>
-</li>
-
-<li>
-<span>Parkinsonian Disorders</span>
-<ul>
-<li>Parkinson's Disease</li>
-<li>Multiple System Atrophy</li>
-<li>Progressive Supranuclear Palsy</li>
-</ul>
-</li>
-
-<li>
-<span>Dystonia</span>
-<ul>
-<li>Focal Dystonia</li>
-<li>Segmental Dystonia</li>
-<li>Generalized Dystonia</li>
-</ul>
-</li>
-
-<li>
-<span>Ataxia</span>
-<ul>
-<li>Spinocerebellar Ataxia</li>
-<li>Friedreich's Ataxia</li>
-</ul>
-</li>
-
-</ul>
-
-</li>
-
-</ul>
-
-</section>
-
-
-
-<!-- INTERACTIVE DIAGRAM -->
-
-<section class="container mb-5">
-
-<h2 class="section-title text-center">Interactive Symptom Explorer</h2>
-
-<p class="text-center">
-
-Select a body area to explore possible movement disorders.
-
-</p>
-
-<div class="diagram">
-
-<button type="button" class="diagram-point head">Head</button>
-
-<button type="button" class="diagram-point hands">Hands</button>
-
-<button type="button" class="diagram-point legs">Legs</button>
-
-<button type="button" class="diagram-point voice">Voice</button>
-
-</div>
-
-<div id="diagram-info" class="diagram-info text-center">
-
-<p>Select an area to see related disorders.</p>
-
-</div>
-
-</section>
-
-</section>
-<!-- INTERACTIVE BODY MAP -->
-
-<section class="container mb-5">
-
-<h2 class="section-title text-center">Interactive Body Map</h2>
-
-<p class="text-center">
-Click a body region to explore possible movement disorders.
-</p>
-
-<div class="body-map-container">
-
-<img src="images/body-outline.png" class="body-map" alt="Human body diagram">
-
-<button type="button" class="map-point head" data-info="Head tremor, dystonia, Tourette syndrome">
-Head
-</button>
-
-<button type="button" class="map-point hands" data-info="Essential tremor, Parkinson’s disease">
-Hands
-</button>
-
-<button type="button" class="map-point legs" data-info="Ataxia, restless legs syndrome">
-Legs
-</button>
-
-<button type="button" class="map-point voice" data-info="Vocal tremor, laryngeal dystonia">
-Voice
-</button>
-
-</div>
-
-<div id="map-result" class="map-result text-center mt-3">
-Select a region to see related conditions.
-</div>
-
-</section>
-
-<!-- =========================
+    <!-- =========================
 FOOTER
 ========================= -->
 
     <footer class="footer">
       <div class="footer-content">
         <p class="mb-3">
-          Understanding brings clarity. Learn about the different movement disorders and how they affect daily life.
+          Understanding brings clarity. Learn about the different movement
+          disorders and how they affect daily life.
         </p>
 
         <!-- Image placed between text  -->
@@ -582,12 +669,14 @@ FOOTER
         />
 
         <p>
-          <a href="privacyPolicy.html" class="privacyPolicyTermsOfUse"
+          <a href="privacyPolicy.html" class="rulesRegulations"
             >Privacy Policy</a
           >
           |
-          <a href="termsOfUse.html" class="privacyPolicyTermsOfUse"
-            >Terms of Use</a
+          <a href="termsOfUse.html" class="rulesRegulations">Terms of Use</a>
+          |
+          <a href="accessibilityCompliance.html" class="rulesRegulations"
+            >Accessibility & Compliance</a
           >
         </p>
 
@@ -604,82 +693,59 @@ FOOTER
       </div>
     </footer>
 
+    <!-- BACK TO TOP -->
 
-<!-- BACK TO TOP -->
+    <button type="button" id="backToTop">↑</button>
 
-<button type="button" id="backToTop">↑</button>
+    <script>
+      const backToTop = document.getElementById("backToTop");
 
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
 
-<script>
+      backToTop.onclick = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
 
-const backToTop = document.getElementById("backToTop");
+      const diagramInfo = document.getElementById("diagram-info");
 
-window.addEventListener("scroll", () => {
+      document.querySelector(".head").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Head:</strong> Tremor, Dystonia, Tourette Syndrome";
+      };
 
-if (window.scrollY > 400) {
-backToTop.style.display = "block";
-} else {
-backToTop.style.display = "none";
-}
+      document.querySelector(".hands").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Hands:</strong> Essential Tremor, Parkinson’s Disease";
+      };
 
-});
+      document.querySelector(".legs").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Legs:</strong> Ataxia, Restless Legs Syndrome";
+      };
 
-backToTop.onclick = () => {
+      document.querySelector(".voice").onclick = () => {
+        diagramInfo.innerHTML =
+          "<strong>Voice:</strong> Vocal Tremor, Laryngeal Dystonia";
+      };
 
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
+      const points = document.querySelectorAll(".map-point");
+      const result = document.getElementById("map-result");
 
-};
-
-
-const diagramInfo = document.getElementById("diagram-info");
-
-document.querySelector(".head").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Head:</strong> Tremor, Dystonia, Tourette Syndrome";
-
-};
-
-document.querySelector(".hands").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Hands:</strong> Essential Tremor, Parkinson’s Disease";
-
-};
-
-document.querySelector(".legs").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Legs:</strong> Ataxia, Restless Legs Syndrome";
-
-};
-
-document.querySelector(".voice").onclick = () => {
-
-diagramInfo.innerHTML =
-"<strong>Voice:</strong> Vocal Tremor, Laryngeal Dystonia";
-
-};
-
-const points = document.querySelectorAll(".map-point");
-const result = document.getElementById("map-result");
-
-points.forEach(point => {
-
-point.addEventListener("click", () => {
-
-result.innerHTML =
-"<strong>Possible conditions:</strong><br>" +
-point.dataset.info;
-
-});
-
-});
-
-</script>
-
-</body>
+      points.forEach((point) => {
+        point.addEventListener("click", () => {
+          result.innerHTML =
+            "<strong>Possible conditions:</strong><br>" + point.dataset.info;
+        });
+      });
+    </script>
+  </body>
 </html>

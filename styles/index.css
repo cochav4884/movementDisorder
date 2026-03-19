@@ -13,7 +13,7 @@
   --text-muted: #5a5a5a;
 
   --border-soft: #c3c9cf;
-  --focus-ring: #3a7bd5;
+  --focus-ring: #2f3e4e;
 }
 
 /* ======================================================
@@ -47,18 +47,7 @@ p {
    ====================================================== */
 .navbar {
   padding: 1.5rem 2rem;
-   background: linear-gradient(
-    90deg,
-    #ffa500 0%,
-    /* Orange */ #ffd700 11%,
-    /* Gold */ #1e90ff 22%,
-    /* Blue */ #32cd32 33%,
-    /* Green */ #008080 44%,
-    /* Teal */ #87cefa 55%,
-    /* Light Blue */ #808080 66%,
-    /* Gray */ #800000 77%,
-    /* Maroon */ #800080 88% /* Purple */
-  );
+  background-color: #c3c9cf;
 }
 
 
@@ -74,20 +63,42 @@ p {
 .nav-link-item {
   display: inline-block;
   background-color: var(--foundation-secondary);
-  color: #ffffff !important;
+  color: #000000 !important;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
 }
 
 .nav-link-item:hover {
-  background-color: #32cd32;
+  background-color: #1f2a33;
+  color: #ffffff !important;
 }
+
 
 /* Navbar Logo */
 .nav-logo {
-   max-width: 5rem;
+  max-width: 5rem;
   max-height: 5rem;
+}
+
+.site-name {
+  color: #000000;
+}
+
+.navbar .dropdown-menu {
+  background-color: #c3c9cf;
+}
+
+/* TARGET DROPDOWN ITEMS PROPERLY */
+.navbar .dropdown-menu .dropdown-item {
+  background-color: #c3c9cf;
+  color: #ffffff;
+}
+
+/* 🔥 HOVER FIX (stronger than Bootstrap) */
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #1f2a33 !important;
+  color: #ffffff !important;
 }
 
 
@@ -204,7 +215,7 @@ button.primary {
 }
 
 button.primary:hover {
-  background-color: #008000;
+  background-color: #808080;
 }
 
 button.primary:disabled {
@@ -265,12 +276,7 @@ button:focus {
    ====================================================== */
 
 .footer {
-  background: linear-gradient(
-    90deg,
-    #ffa500 0%, #ffd700 11%, #1e90ff 22%,
-    #32cd32 33%, #008080 44%, #87cefa 55%,
-    #808080 66%, #800000 77%, #800080 88%
-  );
+  background-color: #c3c9cf;
   color: #fff;
   padding: 3rem 2rem;
   border-radius: 6px;

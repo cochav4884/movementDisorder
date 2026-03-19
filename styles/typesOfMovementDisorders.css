@@ -27,6 +27,7 @@
   border-radius: 10px;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .symptom-card:hover {
@@ -41,7 +42,7 @@
   padding: 1rem 1.25rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   border-left: 8px solid transparent;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .expand-card summary {
@@ -78,14 +79,14 @@
 .ribbon-maroon {
   border-left-color: var(--color-ataxia);
 }
-/* the multi‑color ribbon is handled by the gradient rule above */
 
-/* Multi-color curved ribbon flush to left edge, visually matching other ribbons */
+/* MULTI-COLOR RIBBON */
+
 .expand-card.ribbon-multi {
-  position: relative;        /* for absolute pseudo-element */
-  border-left: none;         /* remove fallback border */
-  overflow: hidden;          /* keep ribbon inside rounded corners */
-  border-radius: 14px;       /* match other cards */
+  position: relative;
+  border-left: none;
+  overflow: hidden;
+  border-radius: 14px;
 }
 
 .expand-card.ribbon-multi::before {
@@ -93,11 +94,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 8px;                 /* same width as single-color ribbons */
+  width: 8px;
   height: 100%;
-  border-radius: 14px 0 0 14px;  /* curved left side to match other ribbons */
+  border-radius: 14px 0 0 14px;
   background: linear-gradient(
-    180deg,                   /* top to bottom like other ribbons */
+    180deg,
     #ffa500,
     #ffd700,
     #1e90ff,
@@ -108,8 +109,8 @@
     #800000,
     #800080
   );
-  z-index: 10;                /* above card background */
-  pointer-events: none;       /* don’t block clicks */
+  z-index: 10;
+  pointer-events: none;
 }
 
 /* CIRCLE ICON */
@@ -123,7 +124,6 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -149,29 +149,15 @@
   border-radius: 4px;
 }
 
-.legend-tremor {
-  background-color: var(--color-tremor);
-}
-.legend-essential-tremor {
-  background-color: var(--color-essential);
-}
-.legend-myoclonus {
-  background-color: var(--color-myoclonus);
-}
-.legend-dystonia {
-  background-color: var(--color-dystonia);
-}
-.legend-parkinsons {
-  background-color: var(--color-parkinsons);
-}
-.legend-ataxia {
-  background-color: var(--color-ataxia);
-}
-.legend-tardive {
-  background-color: var(--color-tardive);
-}
+.legend-tremor { background-color: var(--color-tremor); }
+.legend-essential-tremor { background-color: var(--color-essential); }
+.legend-myoclonus { background-color: var(--color-myoclonus); }
+.legend-dystonia { background-color: var(--color-dystonia); }
+.legend-parkinsons { background-color: var(--color-parkinsons); }
+.legend-ataxia { background-color: var(--color-ataxia); }
+.legend-tardive { background-color: var(--color-tardive); }
 
-/* DIAGRAM */
+/* DIAGRAM (you can remove later if not used) */
 
 .diagram {
   display: flex;
@@ -204,30 +190,15 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-
-  background: linear-gradient(
-    90deg,
-    #ffa500,
-    #ffd700,
-    #1e90ff,
-    #32cd32,
-    #008080,
-    #87cefa,
-    #808080,
-    #800000,
-    #800080
-  );
-
+  background-color: #1f2a33;
+  color: #ffffff;
   border: none;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-
   font-size: 22px;
   font-weight: bold;
-
   display: none;
-
   cursor: pointer;
 }
 
@@ -239,14 +210,16 @@
 
 .body-map-container {
   position: relative;
-  max-width: 350px;
+  max-width: 300px; /* adjust size as needed */
   margin: 0 auto;
 }
 
 .body-map {
   width: 100%;
+  display: block;
 }
 
+/* MAP POINTS */
 .map-point {
   position: absolute;
   padding: 0.35rem 0.5rem;
@@ -256,28 +229,28 @@
   background: #2f3e4e;
   color: white;
   cursor: pointer;
+  transform: translate(-50%, -50%); /* center buttons on coordinates */
 }
 
-/* approximate positions */
-
+/* approximate positions on this stick figure image */
 .map-point.head {
-  top: 8%;
-  left: 45%;
+  top: 5%;
+  left: 50%;
 }
 
 .map-point.voice {
-  top: 18%;
-  left: 48%;
+  top: 12%;
+  left: 50%;
 }
 
 .map-point.hands {
-  top: 40%;
-  left: 10%;
+  top: 55%;
+  left: 20%;
 }
 
 .map-point.legs {
-  bottom: 8%;
-  left: 48%;
+  top: 70%;
+  left: 60%;
 }
 
 .map-result {
@@ -285,7 +258,8 @@
   padding: 1rem;
   border-radius: 8px;
   max-width: 500px;
-  margin: auto;
+  margin: 1rem auto 0;
+  text-align: center;
 }
 
 /* CLASSIFICATION TREE */
