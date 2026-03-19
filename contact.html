@@ -33,98 +33,92 @@ NAVIGATION
 ========================= -->
 
 <header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
 
-<nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img 
+          src="images/logoLighter.png"
+          alt="Motus Collective Logo"
+          class="nav-logo">
+        <span class="fw-bold">Motus Collective</span>
+      </a>
 
-<div class="container">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        title="Toggle navigation"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <div class="collapse navbar-collapse" id="navbarNav">
 
-<img src="images/logoCover.png"
-alt="Motus Collective Logo"
-class="nav-logo">
+        <!-- ✅ EVERYTHING must be inside this UL -->
+        <ul class="navbar-nav ms-auto">
 
-<span class="fw-bold">Motus Collective</span>
+          <li class="nav-item mx-1">
+            <a href="community.html" class="nav-link nav-link-item">Community</a>
+          </li>
 
-</a>
+          <li class="nav-item mx-1">
+            <a href="mission.html" class="nav-link nav-link-item">Mission</a>
+          </li>
 
-<button
-class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navbarNav"
-title="Toggle navigation"
-aria-label="Toggle navigation">
+          <li class="nav-item mx-1">
+            <a href="index.html" class="nav-link nav-link-item">Home</a>
+          </li>
 
-<span class="navbar-toggler-icon"></span>
+          <!-- SERVICES DROPDOWN -->
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle nav-link-item"
+               href="#"
+               id="servicesDropdown"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Services
+            </a>
 
-</button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="education.html">Education</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="donationPage.html">Types of Movement Disorders</a>
+              </li>
+            </ul>
+          </li>
 
-<div class="collapse navbar-collapse" id="navbarNav">
+          <!-- GET INVOLVED DROPDOWN -->
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle nav-link-item"
+               href="#"
+               id="getInvolvedDropdown"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Get Involved
+            </a>
 
-<ul class="navbar-nav ms-auto">
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="reliefIdeas.html">Relief Ideas</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="donationPage.html">Donation Page</a>
+              </li>
+              
+            </ul>
+          </li>
 
-<li class="nav-item mx-1">
-<a href="index.html" class="nav-link nav-link-item">Home Page</a>
-</li>
+        </ul>
 
-<li class="nav-item mx-1">
-<a href="mission.html" class="nav-link nav-link-item">Mission</a>
-</li>
-
-<li class="nav-item mx-1">
-<a href="typesOfMovementDisorders.html" class="nav-link nav-link-item">Types of Movement Disorders</a>
-</li>
-
-<li class="nav-item mx-1">
-<a href="education.html" class="nav-link nav-link-item">Education</a>
-</li>
-
-<li class="nav-item dropdown mx-2">
-
-<a class="nav-link dropdown-toggle nav-link-item"
-href="#"
-id="getInvolvedDropdown"
-role="button"
-data-bs-toggle="dropdown"
-aria-expanded="false">
-
-Get Involved
-
-</a>
-
-<ul class="dropdown-menu">
-
-<li>
-<a class="dropdown-item" href="reliefIdeas.html" >Relief Ideas</a>
-</li>
-
-<li>
-<a class="dropdown-item" href="community.html">Community</a>
-</li>
-
-<li>
-<a class="dropdown-item" href="donationPage.html">Donation Page</a>
-</li>
-
-<li>
-<a class="dropdown-item" href="accessibilityCompliance.html">Accessibility Compliance</a>
-</li>
-
-<li>
-<a class="dropdown-item" href="contact.html">Contact</a>
-</li>
-
-</ul>
-
-</li>
-
-</ul>
-
-</div>
-</div>
-</nav>
-
+      </div>
+    </div>
+  </nav>
 </header>
 
     <!-- Main Content -->
@@ -227,7 +221,7 @@ FOOTER
 
         <!-- Image placed between text  -->
         <img
-          src="images/logoCover.png"
+          src="images/logoLighter.png"
           alt="Motus Collective Logo"
           class="footer-logo"
         />

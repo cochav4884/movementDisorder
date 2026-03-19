@@ -86,16 +86,8 @@ p {
 
 /* Navbar Logo */
 .nav-logo {
-  background-color: #808080;
-
-  max-width: 5rem;
+   max-width: 5rem;
   max-height: 5rem;
-
-  /* Rounded */
-  border-radius: 50%;
-
-  /* Subtle depth */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -298,24 +290,16 @@ button:focus {
 }
 
 .footer-logo {
- background-color: #808080;
-
   max-width: 5rem;
   max-height: 5rem;
-
-  /* Rounded */
-  border-radius: 50%;
-
-  /* Subtle depth */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-.privacyPolicyTermsOfUse {
+.rulesRegulations {
   color: #ffffff;
   text-decoration: none;
 }
 
-.privacyPolicyTermsOfUse:hover {
+.rulesRegulations:hover {
   text-decoration: underline;
   color: #800000;
 }
